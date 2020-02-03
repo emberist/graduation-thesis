@@ -1,0 +1,8 @@
+\babel@toc {italian}{}
+\babel@toc {italian}{}
+\contentsline {chapter}{Introduzione}{1}{chapter*.2}% 
+\contentsline {chapter}{\numberline {1}Progettazione iniziale}{3}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Requisiti essenziali}{3}{section.1.1}% 
+\contentsline {chapter}{\numberline {2}Validazione numerica}{5}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}Conclusioni}{7}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}Riconoscimenti}{9}{chapter.4}% 

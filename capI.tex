@@ -1,0 +1,56 @@
+
+Il mio compito nello sviluppo dell'applicazione è stato quello 
+di creare un prototipo iniziale avendo a disposizione un mock up creato con
+proto.io\cite{protoio} e una serie di requisiti essenziali.
+
+\section{Requisiti essenziali}
+
+La base di partenza di QIX sono state delle funzionalità essenziali e 
+sonstanzialmente molto difficili da inserire in una versione dell'app già avanzata.
+È stati quindi deciso di creare un prototipo di partenza avente i seguenti requisiti:
+
+\begin{itemize}
+    \item {
+        L'applicazione deve avere la capacità di reindirizzare 
+        dinamicamente l'utente in sezioni programmate differenti in base a un constesto.
+        Analizzando il requisito mi sono posto diverse domande:
+        \textit{
+            Cosa significa dinamicamente?
+            Cosa sono delle sezioni programmate?
+            Quale contesto?
+        }
+    }
+    \item {
+        La funzionalità \textbf{QIX Shake} dell'applicazione
+        deve essere disponibile in una qualunque sezione o vista si trovi l'utente
+        e la sua funzione deve essere determinata dal contesto attuale;
+    } 
+    \item {
+        L'intera applicazione dev'essere progettata in modo tale da presentare all'utente
+        delle \textbf{animazioni interattive} in stile CardView\cite{cardview} disponibili in 
+        qualunque sezione o vista in cui si trovi l'utente e definite dal contesto attuale;
+
+        Le animazioni in questione devono essere progettate in pagine, in cui ogni pagina può contenere 
+        più CardView. L'utente vedrà in un determinato momento una e soltanto una pagine.
+
+        Queste viste devono essere trascinabili dall'utente e quando egli usa una forza
+        di trascinamento superiore a un valore di soglia devono cadere attraverso una gravità;
+        
+        Tale gravità finirà con la fine dell'animazione o l'apparizione della nuova pagina;
+    }
+    \item {
+        L'applicazione deve supportare tre diversi stati o modalità di autenticazione:
+        \begin{enumerate}
+            \item\textbf{Trial Mode}: l'utente è anonimo, esiste solo un id per tenere traccia dei suoi QIX coins.
+            \item\textbf{Signed Mode}: l'utente ha inserito il numero di telefono e il suo genere;
+            \item \textbf{Pro Mode}: l'utente aggiunge dei dati su se stesso o collega il suo account a dei social media come Facebook, Google o Instagram;
+        \end{enumerate}
+        Si nota facilmente che non esiste una stato in cui l'utente non è registrato: questo perchè
+        per tenere traccia dei suoi QIX coins e di altri dati utili è necessario avere una riferimento all'utente;
+    }
+    \item {
+        L'applicazione deve poter essere avviata dinamicamente
+        attraverso dei \textbf{Deep Links}\cite{deeplinks};
+        E deve essere in grado di gestirli in base al contesto dell'utente;
+    }
+\end{itemize}
