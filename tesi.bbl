@@ -17,4 +17,13 @@ CardView.
 iOS Universal~Links.
 \newblock https://developer.apple.com/ios/universal-links/.
 
+\bibitem{navigationcontroller}
+Apple~Inc. UINavigationController.
+\newblock
+  https://developer.apple.com/documentation/uikit/uinavigationcontroller.
+
+\bibitem{viewcontroller}
+Apple~Inc. UIViewController.
+\newblock https://developer.apple.com/documentation/uikit/uiviewcontroller.
+
 \end{thebibliography}
