@@ -26,4 +26,8 @@ Apple~Inc. UINavigationController.
 Apple~Inc. UIViewController.
 \newblock https://developer.apple.com/documentation/uikit/uiviewcontroller.
 
+\bibitem{coordinatorpattern}
+Soroush Khanlou.
+\newblock Introdotto nel 2015 alla nsspain conference.
+
 \end{thebibliography}

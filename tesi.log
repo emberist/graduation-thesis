@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  4 FEB 2020 21:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  5 FEB 2020 23:03
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**tesi.tex
+**/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.tex
 (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/book.cls
@@ -341,38 +341,158 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen141
+\captionmargin@=\dimen142
+\captionwidth=\dimen143
+\caption@tempdima=\dimen144
+\caption@indent=\dimen145
+\caption@parindent=\dimen146
+\caption@hangindent=\dimen147
 )
-\sixtyfivecharwidth=\skip52
- (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.aux)
+\c@caption@flags=\count134
+\c@ContinuedFloat=\count135
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2019/01/15
+ Style option: `fancyvrb' v3.2a <2019/01/15> (tvz)
+\FV@CodeLineNo=\count136
+\FV@InFile=\read1
+\FV@TabBox=\box31
+\c@FancyVerbLine=\count137
+\FV@StepNumber=\count138
+\FV@OutFile=\write3
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count139
+\output=\toks26
+\linenoprevgraf=\count140
+\linenumbersep=\dimen148
+\linenumberwidth=\dimen149
+\c@linenumber=\count141
+\c@pagewiselinenumber=\count142
+\c@LN@truepage=\count143
+\c@internallinenumber=\count144
+\c@internallinenumbers=\count145
+\quotelinenumbersep=\dimen150
+\bframerule=\dimen151
+\bframesep=\dimen152
+\bframebox=\box32
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count146
+\c@FV@TrueTabCounter=\count147
+\FV@TabBox@Group=\box33
+\FV@TmpLength=\skip52
+\c@FV@HighlightLinesStart=\count148
+\c@FV@HighlightLinesStop=\count149
+\FV@LoopCount=\count150
+\FV@NCharsBox=\box34
+\FV@BreakIndent=\dimen153
+\FV@BreakIndentNChars=\count151
+\FV@BreakSymbolSepLeft=\dimen154
+\FV@BreakSymbolSepLeftNChars=\count152
+\FV@BreakSymbolSepRight=\dimen155
+\FV@BreakSymbolSepRightNChars=\count153
+\FV@BreakSymbolIndentLeft=\dimen156
+\FV@BreakSymbolIndentLeftNChars=\count154
+\FV@BreakSymbolIndentRight=\dimen157
+\FV@BreakSymbolIndentRightNChars=\count155
+\c@FancyVerbLineBreakLast=\count156
+\FV@LineBox=\box35
+\FV@LineIndentBox=\box36
+\FV@LineWidth=\dimen158
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 67.
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/catchfile.sty
+Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
+)
+runsystem(uname -s > "tesi.w18")...executed.
+
+ (./tesi.w18)
+runsystem(rm -- "tesi.w18")...executed.
+
+) (/usr/local/texlive/2019/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2019/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count157
+\decimalpart=\count158
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen159
+\fb@frh=\dimen160
+\FrameRule=\dimen161
+\FrameSep=\dimen162
+) (/usr/local/texlive/2019/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count159
+\float@exts=\toks27
+\float@box=\box37
+\@float@everytoks=\toks28
+\@floatcapt=\box38
+)
+\minted@appexistsfile=\read2
+\minted@bgbox=\box39
+\minted@code=\write4
+\c@minted@FancyVerbLineTemp=\count160
+\c@minted@pygmentizecounter=\count161
+\@float@every@listing=\toks29
+\c@listing=\count162
+)
+runsystem(mkdir -p _minted-tesi)...executed.
+
+\sixtyfivecharwidth=\skip54
+runsystem(which pygmentize && touch tesi.aex)...executed.
+
+runsystem(rm tesi.aex)...executed.
+
+ (./tesi.aux)
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
-LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count134
-\scratchdimen=\dimen141
-\scratchbox=\box31
-\nofMPsegments=\count135
-\nofMParguments=\count136
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count137
-\MPscratchDim=\dimen142
-\MPnumerator=\count138
-\makeMPintoPDFobject=\count139
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count163
+\scratchdimen=\dimen163
+\scratchbox=\box40
+\nofMPsegments=\count164
+\nofMParguments=\count165
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count166
+\MPscratchDim=\dimen164
+\MPnumerator=\count167
+\makeMPintoPDFobject=\count168
+\everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -385,8 +505,8 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \it@ocap on input line 98.
-LaTeX Info: Redefining \it@ccap on input line 98.
+LaTeX Info: Redefining \it@ocap on input line 100.
+LaTeX Info: Redefining \it@ccap on input line 100.
 
 
 File italian.ldf warning: 
@@ -394,7 +514,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 98.
+italian.ldf    on input line 100.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -430,7 +550,7 @@ italian.ldf    on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 98.
+LaTeX Info: Redefining \microtypecontext on input line 100.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -443,23 +563,180 @@ Package microtype Info: No adjustment of character kerning.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-\AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 98.
+\AtBeginShipoutBox=\box41
+Package hyperref Info: Link coloring OFF on input line 100.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count140
+\c@section@level=\count169
 )
-LaTeX Info: Redefining \ref on input line 98.
-LaTeX Info: Redefining \pageref on input line 98.
-LaTeX Info: Redefining \nameref on input line 98.
- (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.out) (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.out)
-\@outlinefile=\write3
-\openout3 = `tesi.out'.
+LaTeX Info: Redefining \ref on input line 100.
+LaTeX Info: Redefining \pageref on input line 100.
+LaTeX Info: Redefining \nameref on input line 100.
+ (./tesi.out) (./tesi.out)
+\@outlinefile=\write5
+\openout5 = `tesi.out'.
 
-\c@lstlisting=\count141
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2018/08/11 v2.0j Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+Now handling font encoding TS1 ...
+... processing UTF-8 mapping file for font encoding TS1
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2018/10/05 v1.2f UTF-8 support for inputenc
+   defining Unicode char U+00A2 (decimal 162)
+   defining Unicode char U+00A3 (decimal 163)
+   defining Unicode char U+00A4 (decimal 164)
+   defining Unicode char U+00A5 (decimal 165)
+   defining Unicode char U+00A6 (decimal 166)
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00A9 (decimal 169)
+   defining Unicode char U+00AA (decimal 170)
+   defining Unicode char U+00AC (decimal 172)
+   defining Unicode char U+00AE (decimal 174)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B0 (decimal 176)
+   defining Unicode char U+00B1 (decimal 177)
+   defining Unicode char U+00B2 (decimal 178)
+   defining Unicode char U+00B3 (decimal 179)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B5 (decimal 181)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00B9 (decimal 185)
+   defining Unicode char U+00BA (decimal 186)
+   defining Unicode char U+00BC (decimal 188)
+   defining Unicode char U+00BD (decimal 189)
+   defining Unicode char U+00BE (decimal 190)
+   defining Unicode char U+00D7 (decimal 215)
+   defining Unicode char U+00F7 (decimal 247)
+   defining Unicode char U+0192 (decimal 402)
+   defining Unicode char U+02C7 (decimal 711)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+02DD (decimal 733)
+   defining Unicode char U+0E3F (decimal 3647)
+   defining Unicode char U+2016 (decimal 8214)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2031 (decimal 8241)
+   defining Unicode char U+203B (decimal 8251)
+   defining Unicode char U+203D (decimal 8253)
+   defining Unicode char U+2044 (decimal 8260)
+   defining Unicode char U+204E (decimal 8270)
+   defining Unicode char U+2052 (decimal 8274)
+   defining Unicode char U+20A1 (decimal 8353)
+   defining Unicode char U+20A4 (decimal 8356)
+   defining Unicode char U+20A6 (decimal 8358)
+   defining Unicode char U+20A9 (decimal 8361)
+   defining Unicode char U+20AB (decimal 8363)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+20B1 (decimal 8369)
+   defining Unicode char U+2103 (decimal 8451)
+   defining Unicode char U+2116 (decimal 8470)
+   defining Unicode char U+2117 (decimal 8471)
+   defining Unicode char U+211E (decimal 8478)
+   defining Unicode char U+2120 (decimal 8480)
+   defining Unicode char U+2122 (decimal 8482)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+2127 (decimal 8487)
+   defining Unicode char U+212E (decimal 8494)
+   defining Unicode char U+2190 (decimal 8592)
+   defining Unicode char U+2191 (decimal 8593)
+   defining Unicode char U+2192 (decimal 8594)
+   defining Unicode char U+2193 (decimal 8595)
+   defining Unicode char U+2329 (decimal 9001)
+   defining Unicode char U+232A (decimal 9002)
+   defining Unicode char U+2422 (decimal 9250)
+   defining Unicode char U+25E6 (decimal 9702)
+   defining Unicode char U+25EF (decimal 9711)
+   defining Unicode char U+266A (decimal 9834)
+   defining Unicode char U+FEFF (decimal 65279)
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+\c@lstlisting=\count170
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
  (./titlepage.tex
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -493,7 +770,7 @@ LaTeX Info: Redefining \nameref on input line 98.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/logo.png, id=32, 313.17pt x 313.17pt>
+<images/logo.png, id=48, 313.17pt x 313.17pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 5.
@@ -504,7 +781,7 @@ LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <20.74> not available
 
 
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/riccardocaranfil/Desktop/UNI/Tesi/latex/images/logo.png>]) [2
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>]) [2
 
 ]
 *geometry* verbose mode - [ newgeometry ] result:
@@ -541,7 +818,7 @@ LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <20.74> not available
 
  [3
 
-] [4] (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.toc
+] [4] (./tesi.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 5.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -554,57 +831,161 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ))
-\tf@toc=\write4
-\openout4 = `tesi.toc'.
+\tf@toc=\write6
+\openout6 = `tesi.toc'.
 
  [5
 
 ] [6
 
-] (./introduzione.tex
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 8.
- (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 8.
- [1]) [2]
+] (./introduzione.tex [1]) [2]
 Capitolo 1.
-(./capI.tex [3
+(./capI.tex
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 13.
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmr' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [3
 
-] [4]
-<images/navigation.jpg, id=119, 421.575pt x 324.21124pt>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 74--78
+
+ []
+
+[4]
+<images/navigation.jpg, id=139, 421.575pt x 324.21124pt>
 File: images/navigation.jpg Graphic file (type jpg)
 <use images/navigation.jpg>
-Package pdftex.def Info: images/navigation.jpg  used on input line 85.
-(pdftex.def)             Requested size: 152.01498pt x 116.90889pt.
+Package pdftex.def Info: images/navigation.jpg  used on input line 81.
+(pdftex.def)             Requested size: 142.26378pt x 109.40915pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 82.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 79--85
+[]$[]$ 
+ []
+
+<images/push.png, id=140, 1342.01375pt x 723.70375pt>
+File: images/push.png Graphic file (type png)
+<use images/push.png>
+Package pdftex.def Info: images/push.png  used on input line 96.
+(pdftex.def)             Requested size: 284.52756pt x 153.42888pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 97.
+See the caption package documentation for explanation.
+
+[5 <./images/navigation.jpg> <./images/push.png>]
+<images/modal.png, id=150, 1162.3425pt x 769.87625pt>
+File: images/modal.png Graphic file (type png)
+<use images/modal.png>
+Package pdftex.def Info: images/modal.png  used on input line 105.
+(pdftex.def)             Requested size: 284.52756pt x 188.45099pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 108.
+See the caption package documentation for explanation.
+
+[6 <./images/modal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
+
+ []
+
+<images/coordinator.png, id=162, 583.17876pt x 231.86626pt>
+File: images/coordinator.png Graphic file (type png)
+<use images/coordinator.png>
+Package pdftex.def Info: images/coordinator.png  used on input line 137.
+(pdftex.def)             Requested size: 284.52756pt x 113.12721pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 140.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 135--143
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 152--154
+
+ []
+
+<images/coordinator-example.png, id=165, 1023.825pt x 502.87875pt>
+File: images/coordinator-example.png Graphic file (type png)
+<use images/coordinator-example.png>
+Package pdftex.def Info: images/coordinator-example.png  used on input line 157.
+(pdftex.def)             Requested size: 284.52756pt x 139.75385pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 160.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 155--163
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--163
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--163
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./images/coordinator.png>]
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/default-pyg-prefix.pygstyle) (./_minted-tesi/default.pygstyle) (./_minted-tesi/E42197C38BE77E876BCAFE68FC326A6FE28028BAEFE52935A106A4D786FABC0A.pygtex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (205.08627pt too wide) in paragraph at lines 103--104
-[][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (217.08627pt too wide) in paragraph at lines 101--106
- [] 
- []
-
-) [5 </Users/riccardocaranfil/Desktop/UNI/Tesi/latex/images/navigation.jpg>] [6
-
-]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/b/n' tried instead on input line 2.
+)) [8 <./images/coordinator-example.png>]
 Capitolo 2.
-(./capII.tex) [7] [8
+(./capII.tex) [9
+
+] [10
 
 ]
 Capitolo 3.
-(./conclusioni.tex) [9] [10
+(./conclusioni.tex) [11] [12
 
 ]
 Capitolo 4.
-(./riconoscimenti.tex) (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.bbl [11] [12
+(./riconoscimenti.tex) (./tesi.bbl [13] [14
 
 ]
 Overfull \hbox (184.82874pt too wide) in paragraph at lines 21--24
@@ -616,34 +997,36 @@ Overfull \hbox (125.34164pt too wide) in paragraph at lines 26--28
 []\OT1/cmr/m/n/12 (-20) Apple Inc. UI-View-Con-trol-ler.  https://developer.apple.com/documentation/uikit/uiviewcontroller. 
  []
 
-) [13] [14
+) [15] [16
 
-] (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.lof)
-\tf@lof=\write5
-\openout5 = `tesi.lof'.
+] (./tesi.lof)
+\tf@lof=\write7
+\openout7 = `tesi.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
- [15]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
- (/Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
+ [17]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+ (./tesi.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 0B56C729FCF5D394FCFA9C7052D70E4C;390.
+(rerunfilecheck)             Checksum: 914EDC5734B1E94143EFFD0B27BAE3A0;676.
+runsystem(rm tesi.pyg)...executed.
+
  ) 
 Here is how much of TeX's memory you used:
- 11792 strings out of 492616
- 172834 string characters out of 6129482
- 325117 words of memory out of 5000000
- 15415 multiletter control sequences out of 15000+600000
- 17040 words of font info for 88 fonts, out of 8000000 for 9000
+ 15825 strings out of 492616
+ 255540 string characters out of 6129482
+ 449116 words of memory out of 5000000
+ 19339 multiletter control sequences out of 15000+600000
+ 17937 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,14n,40p,810b,1340s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmbcsc10.1244pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on /Users/riccardocaranfil/Desktop/UNI/Tesi/latex/tesi.pdf (21 pages, 221813 bytes).
+ 37i,8n,40p,857b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmttb10.720pk>{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmbcsc10.1244pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on tesi.pdf (23 pages, 383901 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 189 compressed objects within 2 object streams
- 54 named destinations out of 1000 (max. 500000)
- 22595 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 307 PDF objects out of 1000 (max. 8388607)
+ 233 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 23671 words of extra memory for PDF output out of 24883 (max. 10000000)
 

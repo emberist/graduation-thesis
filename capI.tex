@@ -16,9 +16,9 @@ sonstanzialmente molto difficili da inserire in una versione dell'app già avanz
         dal contesto in cui si trova.
     }
     \item {
-        \textbf{QIX Shake}: Tale funzionalità dell'applicazione
-        deve essere disponibile in una qualunque sezione o vista si trovi l'utente
-        e la sua funzione deve essere determinata dal contesto attuale;
+        \textbf{QIX Shake}: L'utente deve poter agitare lo smartphone in qualsiasi
+        sezione dell'applicazione e il risultato deve essere basato sul contesto attuale o su delle direttive dettate
+        da delle Rest API;
     } 
     \item {
         \textbf{Animazioni interattive}: L'intera applicazione dev'essere progettata in modo tale da presentare all'utente
@@ -64,7 +64,7 @@ sonstanzialmente molto difficili da inserire in una versione dell'app già avanz
 %     } \\ \\
 % }
 
-Prima di entrare nel merito della soluzione al problema, spiego brevemente gli
+Prima di entrare nel merito della soluzione al problema, elenco brevemente gli
 standard di navigazione delle app iOS.
 
 Ogni applicazione può avere degli \textbf{UINavigationController}\cite{navigationcontroller},
@@ -72,44 +72,113 @@ ossia dei contenitori di \textbf{UIViewController}\cite{viewcontroller} che veng
 utilizzati per mantenere lo stack di navigazione e gestire la transizioni tra due UIViewController.
 
 Nella figura~\ref{fig:1} si nota facilmente come il Navigation controller gestisce un'array di View Controller e una sola 
-navigation bar
+navigation bar. 
+In iOS sono infatti innate molte animazioni di navigazione che è utile sfruttare, piuttosto di creare 
+componenti custom poi difficili da rendere interattivi.\\
 
-% Ogni \textbf{UIViewController}\cite{viewcontroller} 
-% può avere un \textbf{UINavigationController}\cite{navigationcontroller}, ossia un costrutto che contiene una barra di navigazione superiore 
-% e una serie di APIs per mostrare nuovi UIViewController
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=5cm]{navigation}
+    \captionof{figure}{Navigation controller scheme}
+    \label{fig:1}
+\end{minipage}
+
+\subsection{Tipologie di navigazione}\label{sec:navigation}
+
 Esistono tre tipologie base di navigazione:
 
-\begin{figure}
-    \centering
-    \begin{minipage}[b]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{navigation}
-        \caption{Navigation controller scheme}
-        \label{fig:1}
-    \end{minipage}
-    %   \hfill
-    %   \begin{minipage}[b]{0.4\textwidth}
-    %     \includegraphics[width=\textwidth]{logo}
-    %     \caption{Picture 2}
-    %     \label{fig:2}
-    %   \end{minipage}
-\end{figure}
 
 \begin{enumerate}
     \item{\textbf{Push}: un UIViewController avente un navigation controller può rendere
-    visibile un altro ViewController attraverso la funzione
-    \begin{center}
-        \begin{tabular}{c}
-        \begin{lstlisting}
-func pushViewController(_ viewController: UIViewController, animated: Bool)
-        \end{lstlisting}
-        \end{tabular}
-    \end{center}
-    di un Navigation controller
+    visibile un altro ViewController attraverso la funzione "pushViewController" di un Navigation controller\par
+    \begin{minipage}{\linewidth}
+        \centering
+        \includegraphics[width=10cm]{push}
+        \captionof{figure}{Presantazione di un ViewController tramite push}
+        \label{fig:2}
+    \end{minipage}
     }
-    \item{\textbf{Modal}: un ViewController può presentare un altro ViewController senza necessariamente avere un 
-    Navigation Controller
+    \item{ \textbf{Modal}: un ViewController può presentare un altro ViewController senza necessariamente avere un 
+        Navigation Controller, l'animazione standard è dal basso verso l'alto come in figura~\ref{fig:3}\par
+        \begin{minipage}{\linewidth}
+            \centering
+            \includegraphics[width=10cm]{modal}
+            \captionof{figure}{
+                Presantazione di un ViewController tramite modal
+            }
+            \label{fig:3}
+        \end{minipage}
+    }
+    \item{\textbf{Segue}: Una segue non è altro che un link tra due view controller attraverso un'interfaccia
+        grafica. In base alla tipologia cambia il tipo di navigazione (Modal o Push)
     }
 \end{enumerate}
 
+Avendo definito i principali metodi di navigatione tra ViewController torniamo al problema iniziale:
+\textit{Come possiamo rendere dinamica la navigazione?}
 
-\normalsize
+A seguito di uno studio approfondito di varie tecniche di navigazione iOS ho scelto di utilizzare il
+\textbf{Coordinator Pattern}\cite{coordinatorpattern}.
+
+\subsection{Il Coordinator Pattern}
+
+Generalmente in iOS l'intera logica di un ViewController viene scritta nel ViewController stesso, creando spesso
+file di grosse dimensioni e disordine generale. Il Coordinator Pattern è nato proprio per rendere 
+le applicazioni più scalabili e leggere. 
+
+Ogni ViewController infatti delega tutte le decisioni al suo Coordinator che in base a determinate logiche deciderà
+i passi successivi.
+
+Ogni Coordinator può controllare un ViewController o più Coordinator, questo rende le viste
+indipendenti tra di loro e rende ogni ViewControler totalmente invisibile agli altri.\\
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=10cm]{coordinator}
+    \captionof{figure}{
+        Il Coordinator Pattern
+    }
+    \label{fig:4}
+\end{minipage}\\ \\
+
+La resposibilità dei coordinator è infatti la navigazione, come un navigation controller gestisce i sui View Controller, un coordinator gestisce
+i suoi figli e questo rende ogni vista o flow di navigazione totalmente indipendente dal resto dell'applicazione.
+
+Per navigare tra i view controller vengono generalmente usate le tipologie di navigazione
+descritte nella sezione~\ref{sec:navigation}, tranne le segue, che essendo definete da vista grafica renderebbero
+la navigazine statica e fissata su determinati ViewController. \\
+
+
+Di seguito in figura~\ref{fig:5} presento uno schema dell'utilizzo di due coordinator
+per la gestione di una lista di prodotti e il carrello. \\
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=10cm]{coordinator-example}
+    \captionof{figure}{
+       Esempio di coordinator pattern
+    }
+    \label{fig:5}
+\end{minipage}\\ \\
+
+Come si evince dall'immagine è presente in entrambi i coordinator è presente un oggetto
+\textbf{navigator} che sarà in gestore di un UINavigationController
+
+\section{Il QIX Shake}
+
+In iOS ogni UIViewController risponde a degli eventi. L'evento designato per lo shake è
+\begin{minted}{swift}
+    func motionEnded(_ motion: UIEvent.EventSubtype,
+        with event: UIEvent?)
+\end{minted}
+
+In caso di shake infatto motion sarà uguale a .motionShake
+Per rendere disponibile l'evento "shake" in un qualunque ViewController la soluzione è stata abbastanza semplice:
+è bastato l'utlizzo di un ViewController Genitore e attrvaerso l'eriditarietà ogni view controller è in grado
+di eseguire la stessa funzionalità.
+
+In questo caso è stato optato l'utilizzo delle notifiche locali: quando avviene uno shake i view controller inviano una notifica 
+globale e solo gli observer vi hanno accesso.
+
+\section{Le animazioni interattive}
+
