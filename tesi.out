@@ -6,6 +6,12 @@
 \BOOKMARK [2][-]{subsection.1.2.2}{Il Coordinator Pattern}{section.1.2}% 6
 \BOOKMARK [1][-]{section.1.3}{Il QIX Shake}{chapter.1}% 7
 \BOOKMARK [1][-]{section.1.4}{Le animazioni interattive}{chapter.1}% 8
-\BOOKMARK [0][-]{chapter.2}{Dettagli implementativi}{}% 9
-\BOOKMARK [0][-]{chapter.3}{Conclusioni}{}% 10
-\BOOKMARK [0][-]{chapter.4}{Riconoscimenti}{}% 11
+\BOOKMARK [2][-]{subsection.1.4.1}{ 1. Onnipresenza delle animazioni}{section.1.4}% 9
+\BOOKMARK [2][-]{subsection.1.4.2}{ 2. Aggiunta di una gesture}{section.1.4}% 10
+\BOOKMARK [2][-]{subsection.1.4.3}{ 3. Inserimento della fisica}{section.1.4}% 11
+\BOOKMARK [2][-]{subsection.1.4.4}{ 4. La paginazione}{section.1.4}% 12
+\BOOKMARK [2][-]{subsection.1.4.5}{ 5. Paginazione delle animazioni}{section.1.4}% 13
+\BOOKMARK [2][-]{subsection.1.4.6}{ 6. Il Collider}{section.1.4}% 14
+\BOOKMARK [0][-]{chapter.2}{Dettagli implementativi}{}% 15
+\BOOKMARK [0][-]{chapter.3}{Conclusioni}{}% 16
+\BOOKMARK [0][-]{chapter.4}{Riconoscimenti}{}% 17

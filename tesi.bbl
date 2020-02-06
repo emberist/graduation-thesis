@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{urbanasmartsolutions}
 Urbana Smart~Solutions srl.
@@ -29,5 +29,16 @@ Apple~Inc. UIViewController.
 \bibitem{coordinatorpattern}
 Soroush Khanlou.
 \newblock Introdotto nel 2015 alla nsspain conference.
+
+\bibitem{uiwindow}
+Apple~Inc. UIWindow.
+\newblock https://developer.apple.com/documentation/uikit/uiwindow.
+
+\bibitem{uikit}
+Apple~Inc. UIKit.
+\newblock https://developer.apple.com/documentation/uikit.
+
+\bibitem{uidynamics}
+UIKitDynamics.
 
 \end{thebibliography}
