@@ -11,9 +11,9 @@
 \contentsline {subsection}{\numberline {1.4.1}~\ref {animationenum:1}. Onnipresenza delle animazioni}{9}{subsection.1.4.1}% 
 \contentsline {subsection}{\numberline {1.4.2}~\ref {animationenum:2}. Aggiunta di una gesture}{10}{subsection.1.4.2}% 
 \contentsline {subsection}{\numberline {1.4.3}~\ref {animationenum:3}. Inserimento della fisica}{10}{subsection.1.4.3}% 
-\contentsline {subsection}{\numberline {1.4.4}~\ref {animationenum:4}. La paginazione}{11}{subsection.1.4.4}% 
-\contentsline {subsection}{\numberline {1.4.5}~\ref {animationenum:5}. Paginazione delle animazioni}{11}{subsection.1.4.5}% 
-\contentsline {subsection}{\numberline {1.4.6}~\ref {animationenum:6}. Il Collider}{11}{subsection.1.4.6}% 
-\contentsline {chapter}{\numberline {2}Dettagli implementativi}{13}{chapter.2}% 
-\contentsline {chapter}{\numberline {3}Conclusioni}{15}{chapter.3}% 
-\contentsline {chapter}{\numberline {4}Riconoscimenti}{17}{chapter.4}% 
+\contentsline {subsection}{\numberline {1.4.4}~\ref {animationenum:4}. La paginazione}{13}{subsection.1.4.4}% 
+\contentsline {subsection}{\numberline {1.4.5}~\ref {animationenum:5}. Paginazione delle animazioni}{13}{subsection.1.4.5}% 
+\contentsline {subsection}{\numberline {1.4.6}~\ref {animationenum:6}. Il Collider}{13}{subsection.1.4.6}% 
+\contentsline {chapter}{\numberline {2}Dettagli implementativi}{15}{chapter.2}% 
+\contentsline {chapter}{\numberline {3}Conclusioni}{17}{chapter.3}% 
+\contentsline {chapter}{\numberline {4}Riconoscimenti}{19}{chapter.4}% 

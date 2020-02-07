@@ -238,20 +238,67 @@ Tali strumenti sono nativi e offrono diverse tipologie per l'iterazione:
     \item UILongPressGestureRecognizer: responsabile di una prossione prolungata nel tempo
 \end{itemize}
 
-Per un'animazione che deve muoversi come se l'utente la stesse spostando occore una UIPanGestureRecognizer.
-In particolare una per ogni vista "draggabile".
+Per un'animazione che ha necessità di muoversi come se l'utente la stesse spostando occore una UIPanGestureRecognizer.
+Dalla doumentazione delle UIGestureRecognizer viene spiegato che ohni vista "draggabile" necessiata una gesture,
+per questo ogni card view dovrà averne una.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %                        Gravità                                        %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \subsection{~\ref{animationenum:3}. Inserimento della fisica}
 
-Per strutturare le animazioni è stato fatto un attento studio a metodologie e frameworks
+Per la progettazione iniziale delle animazioni è stato fatto un attento studio a metodologie e frameworks
 atti a creare animazioni interattive fluide.
 
-Alla fine è stato deciso di utilizzare in pacchetto
-nativo di iOS incluso nello UIKit\cite{uikit}, chiamato UIKitDynamics\cite{uidynamics}: questo framework, con una serie di API 
-plug and play, offre delle funzioni di animazione base che includo la fisica del mondo reale.
+Alla fine è stato deciso di utilizzare un pacchetto
+nativo di iOS incluso nello UIKit\cite{uikit}, chiamato UIKitDynamics\cite{uidynamics}: questo framework,
+con una serie di API, offre delle funzioni di animazione base che 
+includo la fisica del mondo reale.
+
+Il framework si basa su degli oggetti \textbf{UIDynamicAnimator}, ogni animator è responsabile delle
+animazioni che avengono sulla \textbf{referenceView}. Ogni animator infatti inizializza
+in attraverso la seguente funzione:
+\begin{minted}{swift}
+    UIDynamicAnimator.init(referenceView view: UIView)
+\end{minted}
+
+una volta inizializzato attraverso la funzione addBehavior sarà posibile assegnarli
+dei comportamenti fisici predefiniti. I comportamenti di base sono:
+
+\begin{itemize}
+    \item\textbf{UIDynamicBehavior}: il comportamento base da cui ereditano tutti gli altri;
+    \item\textbf{UIAttachmentBehavior}: crea una relazione o legame tra due DynamicItem o tra un DynamicItem e un punto di ancoraggio;
+    \item\textbf{UICollisionBehavior}: un oggetto che conferisce a un array di DynamicItems la possibilità di impegnarsi in collisioni tra loro e con i limiti specificati del comportamento
+    \item\textbf{UIFieldBehavior}: un oggetto che conferisce delle proprietà magnetiche, elettriche a un DynamicItem;
+    \item\textbf{UIGravityBehavior}: aggiunge all'oggeto un forza di gravità;
+    \item\textbf{UIPushBehavior}: Aggiunge all'oggetto una forza continua o istantanea in una direzione specifica;
+    \item\textbf{UISnapBehavior}: Un comportamento simile a una molla il cui movimento iniziale viene smorzato nel tempo in modo che l'oggetto si stabilizzi in un punto specifico.
+\end{itemize}
+
+Di seguito un esempio di implementazione degli strumenti UIDynamics in QIX
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=10cm]{animation}
+    \captionof{figure}{
+       Schema dell'implementazione di UIDynamics
+    }
+    \label{fig:6}
+\end{minipage}\\
+
+Nella figura~\ref{fig:6} si vede lo schermo di uno smartphone, che presenta l'animazione
+voluta in questo caso con dueCardView. Ogni Card View ha un UIAttachmentBehavior al centro per fare in modo che non
+si muova, un UICollisionBehavior per permettere che durante il drag le cardView possa scontrarsi e non si accavallino e un UIGravityBehavior, il quale 
+viene utilizzato per la caduta delle viste alla fine dell'animazione.
+
+In più esiste uno speciale UIAttachmentBehavior tra i centri delle due CardView per permettere che il movimento di una
+sposti anche l'altra, è una sorta di corda che le lega.
+
+Per l'ingresso invece è stato inserito un UISnapBehavior, al centro per ogni oggetto, che anima 
+gli oggenti dando un effetto a molla.
+
+Tutte le animazione sono attivate e disattive in specifici momenti, questo dipende 
+dalla UIPanGesture e dai movimenti dell'utente.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %                        Pagination                                     %
