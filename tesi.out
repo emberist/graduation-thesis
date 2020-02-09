@@ -1,17 +1,26 @@
 \BOOKMARK [0][-]{chapter*.2}{Introduzione}{}% 1
 \BOOKMARK [0][-]{chapter.1}{Progettazione iniziale}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Requisiti essenziali}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.2}{La navigazione dinamica}{chapter.1}% 4
-\BOOKMARK [2][-]{subsection.1.2.1}{Tipologie di navigazione}{section.1.2}% 5
-\BOOKMARK [2][-]{subsection.1.2.2}{Il Coordinator Pattern}{section.1.2}% 6
-\BOOKMARK [1][-]{section.1.3}{Il QIX Shake}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.4}{Le animazioni interattive}{chapter.1}% 8
-\BOOKMARK [2][-]{subsection.1.4.1}{ 1. Onnipresenza delle animazioni}{section.1.4}% 9
-\BOOKMARK [2][-]{subsection.1.4.2}{ 2. Aggiunta di una gesture}{section.1.4}% 10
-\BOOKMARK [2][-]{subsection.1.4.3}{ 3. Inserimento della fisica}{section.1.4}% 11
-\BOOKMARK [2][-]{subsection.1.4.4}{ 4. La paginazione}{section.1.4}% 12
-\BOOKMARK [2][-]{subsection.1.4.5}{ 5. Paginazione delle animazioni}{section.1.4}% 13
-\BOOKMARK [2][-]{subsection.1.4.6}{ 6. Il Collider}{section.1.4}% 14
-\BOOKMARK [0][-]{chapter.2}{Dettagli implementativi}{}% 15
-\BOOKMARK [0][-]{chapter.3}{Conclusioni}{}% 16
-\BOOKMARK [0][-]{chapter.4}{Riconoscimenti}{}% 17
+\BOOKMARK [1][-]{section.1.1}{Obiettivo}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{Requisiti essenziali}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Componenti base di iOS }{}% 5
+\BOOKMARK [1][-]{section.2.1}{Navigazione standard}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{Tipologie di navigazione}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{UIKit Dynamics}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Comportamenti base}{section.2.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Navigazione dinamica}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Il Coordinator Pattern}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{QIX Shake}{}% 12
+\BOOKMARK [0][-]{chapter.5}{Animazioni interattive}{}% 13
+\BOOKMARK [1][-]{section.5.1}{Scomposizione del requisito}{chapter.5}% 14
+\BOOKMARK [2][-]{subsection.5.1.1}{ 1. Onnipresenza delle animazioni}{section.5.1}% 15
+\BOOKMARK [2][-]{subsection.5.1.2}{ 2. Aggiunta di una gesture}{section.5.1}% 16
+\BOOKMARK [2][-]{subsection.5.1.3}{ 3. Aggiunta della gravit\340 }{section.5.1}% 17
+\BOOKMARK [2][-]{subsection.5.1.4}{ 4. La CardView modulare}{section.5.1}% 18
+\BOOKMARK [2][-]{subsection.5.1.5}{ 5. Paginazione delle animazioni}{section.5.1}% 19
+\BOOKMARK [2][-]{subsection.5.1.6}{ 5. Il Collider}{section.5.1}% 20
+\BOOKMARK [0][-]{chapter.6}{Autenticazione}{}% 21
+\BOOKMARK [1][-]{section.6.1}{Firebase Authentication}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.2}{Tipologie di autenticazione}{chapter.6}% 23
+\BOOKMARK [0][-]{chapter.7}{Dynamic Links}{}% 24
+\BOOKMARK [0][-]{chapter.8}{Conclusioni}{}% 25
+\BOOKMARK [0][-]{chapter.9}{Riconoscimenti}{}% 26

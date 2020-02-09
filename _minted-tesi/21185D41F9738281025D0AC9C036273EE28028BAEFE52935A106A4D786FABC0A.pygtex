@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k+kd}{let} \PYG{n+nv}{gravityBehavior} \PYG{p}{=} \PYG{n+nb+bp}{UIGravityBehavior}\PYG{p}{(}\PYG{n}{items}\PYG{p}{:} \PYG{n}{page}\PYG{p}{.}\PYG{n}{views}\PYG{p}{)}
+    \PYG{n}{gravityBehavior}\PYG{p}{.}\PYG{n}{magnitude} \PYG{p}{=} \PYG{n}{Constants}\PYG{p}{.}\PYG{n}{gravity}
+\end{Verbatim}

@@ -1,44 +1,63 @@
 \begin{thebibliography}{10}
 
 \bibitem{urbanasmartsolutions}
-Urbana Smart~Solutions srl.
-\newblock https://www.urbanasolutions.net.
+Urbana smart solutions srl.
+\newblock \url{https://www.urbanasolutions.net}.
 
 \bibitem{protoio}
 Proto.io.
-\newblock https://proto.io.
+\newblock \url{https://proto.io}.
 
 \bibitem{cardview}
-CardView.
-\newblock Definiamo cardview una vista rettangolo con un border radius e del
+{\em CardView}.
+\newblock Definiamo CardView una vista rettangolo con un border radius e del
   contenuto di testo e immagini variabile.
 
 \bibitem{deeplinks}
-iOS Universal~Links.
-\newblock https://developer.apple.com/ios/universal-links/.
-
-\bibitem{navigationcontroller}
-Apple~Inc. UINavigationController.
-\newblock
-  https://developer.apple.com/documentation/uikit/uinavigationcontroller.
+Apple Inc.
+\newblock Universal links.
+\newblock \url{https://developer.apple.com/ios/universal-links/}.
 
 \bibitem{viewcontroller}
-Apple~Inc. UIViewController.
-\newblock https://developer.apple.com/documentation/uikit/uiviewcontroller.
+Apple Inc.
+\newblock Uiviewcontroller.
+\newblock
+  \url{https://developer.apple.com/documentation/uikit/uiviewcontroller}.
+
+\bibitem{navigationcontroller}
+Apple Inc.
+\newblock Uinavigationcontroller.
+\newblock
+  \url{https://developer.apple.com/documentation/uikit/uinavigationcontroller}.
+
+\bibitem{uikit}
+Apple Inc.
+\newblock Uikit.
+\newblock \url{https://developer.apple.com/documentation/uikit}.
+
+\bibitem{uidynamics}
+Apple Inc.
+\newblock Uikitdynamics.
+\newblock
+  \url{https://developer.apple.com/documentation/uikit/animation_and_haptics/uikit_dynamics}.
 
 \bibitem{coordinatorpattern}
 Soroush Khanlou.
 \newblock Introdotto nel 2015 alla nsspain conference.
 
 \bibitem{uiwindow}
-Apple~Inc. UIWindow.
-\newblock https://developer.apple.com/documentation/uikit/uiwindow.
+Apple Inc.
+\newblock Uiwindow.
+\newblock \url{https://developer.apple.com/documentation/uikit/uiwindow}.
 
-\bibitem{uikit}
-Apple~Inc. UIKit.
-\newblock https://developer.apple.com/documentation/uikit.
+\bibitem{lottie}
+Airbnb Inc.
+\newblock Lottie.
+\newblock \url{https://github.com/airbnb/lottie-ios}.
 
-\bibitem{uidynamics}
-UIKitDynamics.
+\bibitem{firebase}
+Google LLC.
+\newblock Firebase platform.
+\newblock \url{https://firebase.google.com/}.
 
 \end{thebibliography}

@@ -1,0 +1,13 @@
+In iOS ogni UIViewController risponde a degli eventi. L'evento designato per lo shake è
+\begin{minted}{swift}
+    func motionEnded(_ motion: UIEvent.EventSubtype,
+        with event: UIEvent?)
+\end{minted}
+
+In caso di shake infatto motion sarà uguale a .motionShake
+Per rendere disponibile l'evento "shake" in un qualunque ViewController la soluzione è stata abbastanza semplice:
+è bastato l'utlizzo di un ViewController Genitore e attrvaerso l'eriditarietà ogni view controller è in grado
+di eseguire la stessa funzionalità.
+
+In questo caso è stato optato l'utilizzo delle notifiche locali: quando avviene uno shake i view controller inviano una notifica 
+globale e solo gli observer vi hanno accesso.

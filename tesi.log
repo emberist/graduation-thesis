@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  7 FEB 2020 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  9 FEB 2020 23:14
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -770,7 +770,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/logo.png, id=72, 313.17pt x 313.17pt>
+<images/logo.png, id=108, 313.17pt x 313.17pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 5.
@@ -830,18 +830,18 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+) [5
+
+])
 \tf@toc=\write6
 \openout6 = `tesi.toc'.
 
- [5
+ [6] (./introduzione.tex [1
 
-] [6
-
-] (./introduzione.tex [1]) [2]
+]) [2]
 Capitolo 1.
-(./capI.tex
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 13.
+(./cap1.tex
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 15.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -851,225 +851,308 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [3
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 74--78
+]) [4]
+Capitolo 2.
+(./cap2.tex
+Underfull \hbox (badness 10000) in paragraph at lines 27--31
 
  []
 
-[4]
-<images/navigation.jpg, id=182, 421.575pt x 324.21124pt>
+<images/navigation.jpg, id=224, 421.575pt x 324.21124pt>
 File: images/navigation.jpg Graphic file (type jpg)
 <use images/navigation.jpg>
-Package pdftex.def Info: images/navigation.jpg  used on input line 81.
+Package pdftex.def Info: images/navigation.jpg  used on input line 34.
 (pdftex.def)             Requested size: 142.26378pt x 109.40915pt.
 
-
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 82.
+(caption)                particular \caption on input line 35.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 79--85
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 32--38
 []$[]$ 
- []
-
-<images/push.png, id=183, 1342.01375pt x 723.70375pt>
-File: images/push.png Graphic file (type png)
-<use images/push.png>
-Package pdftex.def Info: images/push.png  used on input line 95.
-(pdftex.def)             Requested size: 284.52756pt x 153.42888pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 96.
-See the caption package documentation for explanation.
-
-[5 <./images/navigation.jpg> <./images/push.png>]
-<images/modal.png, id=193, 1162.3425pt x 769.87625pt>
-File: images/modal.png Graphic file (type png)
-<use images/modal.png>
-Package pdftex.def Info: images/modal.png  used on input line 104.
-(pdftex.def)             Requested size: 284.52756pt x 188.45099pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 107.
-See the caption package documentation for explanation.
-
-[6 <./images/modal.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
-
- []
-
-<images/coordinator.png, id=204, 583.17876pt x 231.86626pt>
-File: images/coordinator.png Graphic file (type png)
-<use images/coordinator.png>
-Package pdftex.def Info: images/coordinator.png  used on input line 136.
-(pdftex.def)             Requested size: 284.52756pt x 113.12721pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 139.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 134--142
-[]$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--142
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--142
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--152
-
- []
-
-<images/coordinator-example.png, id=207, 1023.825pt x 502.87875pt>
-File: images/coordinator-example.png Graphic file (type png)
-<use images/coordinator-example.png>
-Package pdftex.def Info: images/coordinator-example.png  used on input line 155.
-(pdftex.def)             Requested size: 284.52756pt x 139.75385pt.
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 158.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 153--161
-[]$[]$ 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--161
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--161
-
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 <./images/coordinator.png>]
+ [5
+
+]
+<images/push.png, id=232, 1342.01375pt x 723.70375pt>
+File: images/push.png Graphic file (type png)
+<use images/push.png>
+Package pdftex.def Info: images/push.png  used on input line 48.
+(pdftex.def)             Requested size: 284.52756pt x 153.42888pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 49.
+See the caption package documentation for explanation.
+
+<images/modal.png, id=234, 1162.3425pt x 769.87625pt>
+File: images/modal.png Graphic file (type png)
+<use images/modal.png>
+Package pdftex.def Info: images/modal.png  used on input line 57.
+(pdftex.def)             Requested size: 284.52756pt x 188.45099pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 60.
+See the caption package documentation for explanation.
+
+[6 <./images/navigation.jpg> <./images/push.png>]
 \openout3 = `tesi.pyg'.
 
- (./_minted-tesi/default-pyg-prefix.pygstyle) (./_minted-tesi/default.pygstyle) (./_minted-tesi/E42197C38BE77E876BCAFE68FC326A6FE28028BAEFE52935A106A4D786FABC0A.pygtex
+ (./_minted-tesi/default-pyg-prefix.pygstyle) (./_minted-tesi/default.pygstyle) (./_minted-tesi/C83B78DF782CDA1F6A6A22A96228DFA7E28028BAEFE52935A106A4D786FABC0A.pygtex
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/b/n' tried instead on input line 2.
-) [8 <./images/coordinator-example.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 209--213
-
- []
-
-[9]
-\openout3 = `tesi.pyg'.
-
- (./_minted-tesi/C83B78DF782CDA1F6A6A22A96228DFA7E28028BAEFE52935A106A4D786FABC0A.pygtex [10])
-<images/animation.png, id=241, 322.20375pt x 322.20375pt>
+) [7 <./images/modal.png>]
+<images/animation.png, id=257, 322.20375pt x 322.20375pt>
 File: images/animation.png Graphic file (type png)
 <use images/animation.png>
-Package pdftex.def Info: images/animation.png  used on input line 282.
+Package pdftex.def Info: images/animation.png  used on input line 157.
 (pdftex.def)             Requested size: 284.52756pt x 284.53821pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 285.
+(caption)                particular \caption on input line 160.
 See the caption package documentation for explanation.
 
-
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 280--288
+)
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 155--149
 []$[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 280--288
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 313--316
+Underfull \hbox (badness 10000) in paragraph at lines 155--149
 
  []
 
 
-Underfull \vbox (badness 1122) has occurred while \output is active []
+Underfull \vbox (badness 6526) has occurred while \output is active []
 
- [12 <./images/animation.png>]) [13] [14
-
-]
-Capitolo 2.
-(./capII.tex) [15] [16
+ [8] [9 <./images/animation.png>] [10
 
 ]
 Capitolo 3.
-(./conclusioni.tex) [17] [18
+(./cap3.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+<images/coordinator.png, id=274, 583.17876pt x 231.86626pt>
+File: images/coordinator.png Graphic file (type png)
+<use images/coordinator.png>
+Package pdftex.def Info: images/coordinator.png  used on input line 23.
+(pdftex.def)             Requested size: 284.52756pt x 113.12721pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 26.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 21--29
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--29
+
+ []
+
+
+Underfull \vbox (badness 6125) has occurred while \output is active []
+
+ [11]
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
+
+ []
+
+<images/coordinator-example.png, id=282, 1023.825pt x 502.87875pt>
+File: images/coordinator-example.png Graphic file (type png)
+<use images/coordinator-example.png>
+Package pdftex.def Info: images/coordinator-example.png  used on input line 42.
+(pdftex.def)             Requested size: 284.52756pt x 139.75385pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 45.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 40--48
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--48
+
+ []
+
+
+Underfull \vbox (badness 4391) has occurred while \output is active []
+
+ [12 <./images/coordinator.png> <./images/coordinator-example.png>]) [13] [14
 
 ]
 Capitolo 4.
-(./riconoscimenti.tex) (./tesi.bbl [19] [20
+(./cap4.tex
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/E42197C38BE77E876BCAFE68FC326A6FE28028BAEFE52935A106A4D786FABC0A.pygtex)) [15] [16
 
 ]
-Overfull \hbox (190.70367pt too wide) in paragraph at lines 21--24
-[]\OT1/cmr/m/n/12 (-20) Apple Inc. UI-Na-vi-ga-tion-Con-trol-ler.  https://developer.apple.com/documentation/uikit/uinavigationcontroller. 
+Capitolo 5.
+(./cap5.tex
+Underfull \hbox (badness 10000) in paragraph at lines 73--77
+
+ []
+
+[17] [18]
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/21185D41F9738281025D0AC9C036273EE28028BAEFE52935A106A4D786FABC0A.pygtex)
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
+
+ []
+
+<images/an12.png, id=333, 1129.21875pt x 1222.5675pt>
+File: images/an12.png Graphic file (type png)
+<use images/an12.png>
+Package pdftex.def Info: images/an12.png  used on input line 167.
+(pdftex.def)             Requested size: 284.52756pt x 308.04759pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 170.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 165--173
+[]$[]$ 
  []
 
 
-Overfull \hbox (131.21658pt too wide) in paragraph at lines 26--28
-[]\OT1/cmr/m/n/12 (-20) Apple Inc. UI-View-Con-trol-ler.  https://developer.apple.com/documentation/uikit/uiviewcontroller. 
+Underfull \hbox (badness 10000) in paragraph at lines 165--173
+
  []
 
 
-Overfull \hbox (64.69267pt too wide) in paragraph at lines 34--36
-[]\OT1/cmr/m/n/12 (-20) Apple Inc. UI-Win-dow.  https://developer.apple.com/documentation/uikit/uiwindow. 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
+
  []
 
-) [21] [22
+[21 <./images/an12.png>]
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/34B3CEA40962F35C06B7454B5E69035AE28028BAEFE52935A106A4D786FABC0A.pygtex)) [22]
+Capitolo 6.
+(./cap6.tex
+
+LaTeX Warning: Reference `section:dynamiclinks' on page 23 undefined on input line 12.
+
+
+Underfull \vbox (badness 2277) has occurred while \output is active []
+
+ [23
+
+]
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/01063FFF82839E1F23DB8E43231A549BE28028BAEFE52935A106A4D786FABC0A.pygtex)
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/9E98D552DA207BFB8CBF197D5D9E0860E28028BAEFE52935A106A4D786FABC0A.pygtex)
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/610B09BCA25313B9AE46C1758F953E4EE28028BAEFE52935A106A4D786FABC0A.pygtex)) [24]
+Capitolo 7.
+(./cap7.tex) [25
+
+] [26
+
+]
+Capitolo 8.
+(./conclusioni.tex) [27] [28
+
+]
+Capitolo 9.
+(./riconoscimenti.tex) (./tesi.bbl [29] [30
+
+]
+Underfull \hbox (badness 1142) in paragraph at lines 22--26
+[]\OT1/cmr/m/n/12 (+20) Apple Inc.  Ui-view-con-trol-ler.  []$\OT1/cmtt/m/n/12 https : / / developer . apple . com /
+ []
+
+
+Underfull \hbox (badness 2582) in paragraph at lines 39--43
+[]\OT1/cmr/m/n/12 (+20) Apple Inc.  Ui-kit-dy-na-mics.  []$\OT1/cmtt/m/n/12 https : / / developer . apple . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+[]\OT1/cmr/m/n/12 (+20) Apple Inc.  Ui-win-dow.  []$\OT1/cmtt/m/n/12 https : / / developer . apple . com /
+ []
+
+) [31] [32
 
 ] (./tesi.lof)
 \tf@lof=\write7
 \openout7 = `tesi.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
- [23]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
+ [33]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 183.
  (./tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 183.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 183.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 4C0CB26B6D6501E179167459886E4E49;1153.
+(rerunfilecheck)             Checksum: F2A6D71B8A9B5D53765D351C53E516FB;1685.
+
+
+LaTeX Warning: There were undefined references.
+
 runsystem(rm tesi.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 15880 strings out of 492616
- 256501 string characters out of 6129482
- 449630 words of memory out of 5000000
- 19360 multiletter control sequences out of 15000+600000
- 18133 words of font info for 102 fonts, out of 8000000 for 9000
+ 15976 strings out of 492616
+ 258827 string characters out of 6129482
+ 451205 words of memory out of 5000000
+ 19390 multiletter control sequences out of 15000+600000
+ 18655 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,40p,857b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
- </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmttb10.720pk>{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmbcsc10.1244pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (29 pages, 407867 bytes).
+ 37i,8n,40p,857b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmttb10.720pk>{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmbcsc10.1244pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on tesi.pdf (39 pages, 3562198 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 315 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 500000)
- 23724 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 527 PDF objects out of 1000 (max. 8388607)
+ 426 compressed objects within 5 object streams
+ 107 named destinations out of 1000 (max. 500000)
+ 24313 words of extra memory for PDF output out of 24883 (max. 10000000)
 

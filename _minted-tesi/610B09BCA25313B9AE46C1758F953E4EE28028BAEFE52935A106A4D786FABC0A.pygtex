@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{c+c1}{// L\PYGZsq{}oggetto user è sempre disponibile in firebase e}
+    \PYG{c+c1}{// salvato nel keychain di iOS}
+    \PYG{k+kd}{let} \PYG{n+nv}{user} \PYG{p}{=} \PYG{n}{Auth}\PYG{p}{.}\PYG{n}{auth}\PYG{p}{().}\PYG{n}{currentUser}
+
+    \PYG{c+c1}{// Creazione dell\PYGZsq{}oggetto credenzial da collegare}
+    \PYG{c+c1}{// all\PYGZsq{}utente attuale (anonimo o non)}
+    \PYG{k+kd}{let} \PYG{n+nv}{credential} \PYG{p}{=} \PYG{n}{EmailAuthProvider}\PYG{p}{.}\PYG{n}{credential}\PYG{p}{(}\PYG{n}{withEmail}\PYG{p}{:} \PYG{n}{email}\PYG{p}{,}
+        \PYG{n}{password}\PYG{p}{:} \PYG{n}{password}\PYG{p}{)}
+
+    \PYG{c+c1}{// Linking dei due account}
+    \PYG{n}{user}\PYG{p}{?.}\PYG{n}{link}\PYG{p}{(}\PYG{n}{with}\PYG{p}{:} \PYG{n}{credential}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{p}{(}\PYG{n}{authResult}\PYG{p}{,} \PYG{n}{error}\PYG{p}{)} \PYG{k}{in}
+        \PYG{c+c1}{// ...}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

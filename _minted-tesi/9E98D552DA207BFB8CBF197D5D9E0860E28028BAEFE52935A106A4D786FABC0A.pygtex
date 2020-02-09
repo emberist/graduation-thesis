@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{Auth}\PYG{p}{.}\PYG{n}{auth}\PYG{p}{().}\PYG{n}{signInAnonymously}\PYG{p}{()} \PYG{p}{\PYGZob{}} \PYG{p}{(}\PYG{n}{authResult}\PYG{p}{,} \PYG{n}{error}\PYG{p}{)} \PYG{k}{in}
+        \PYG{c+c1}{// ...}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}
