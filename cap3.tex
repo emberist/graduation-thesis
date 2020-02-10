@@ -12,7 +12,7 @@ Generalmente in iOS l'intera logica di un ViewController viene scritta nel contr
 file di grosse dimensioni e disordine generale. Il Coordinator Pattern è nato proprio per rendere 
 le applicazioni più scalabili e leggere. 
 
-Ogni ViewController infatti delega tutte le decisioni al suo Coordinator che in base a determinate logiche deciderà
+Ogni ViewController infatti delega tutte le decisioni al suo Coordinator, attraverso il Delegation Pattern (vedere sezione~\ref{delegation}), che in base a determinate logiche deciderà
 i passi successivi.
 
 Ogni Coordinator può controllare un ViewController o più Coordinator, questo rende le viste
@@ -48,3 +48,141 @@ per la gestione di una lista di prodotti e il carrello. \\
 
 Come si evince dall'immagine è presente in entrambi i coordinator è presente un oggetto
 \textbf{navigator} che sarà in gestore di un UINavigationController
+
+\section{Implementazione}
+
+Ogni coordinator ha degli elementi fissi che sono:
+
+\begin{itemize}
+    \item Una funzione di partenza denominata \textbf{start};
+    \item Un array di coordinator figli;
+\end{itemize}
+
+Per questo ho iniziato implementando dei protocolli:
+\subsection{Protocolli base}
+
+Il primo protollo implememtato è quello che defisce un qualunque coordinator
+e ne tiene in memoria i figli in modo che non vengano
+dealloccati automaticamente dal sistema operativo.
+
+\begin{minted}{swift}
+protocol Coordinator: class {
+
+    var childCoordinators: [Coordinator] { get set }
+    
+    /** Utilizzato task di inizializzazione */
+    func start()
+    
+}
+
+extension Coordinator {
+    
+    // Aggiunge un figlio al coordinator padre
+    func add(childCoordinator: Coordinator) {
+        childCoordinators.append(childCoordinator)
+    }
+    
+    // Rimuove un Coordinator figlio dal parent
+    func remove(childCoordinator: Coordinator) {
+        childCoordinators = childCoordinators.filter {
+            $0 !== childCoordinator 
+        }
+    }
+}
+\end{minted}
+
+Successivamente è stato implementato un BaseCoordinatorPresentable, che estende Coordinator
+e aggiunge delle funzionalità di presentazione modale.
+
+\begin{minted}{swift}
+protocol BaseCoordinatorPresentable: Coordinator {
+
+    // Il view controller principale del coordinator
+    var _rootViewController: UIViewController { get }
+}
+
+// MARK: - Presentation Methods
+
+extension BaseCoordinatorPresentable {
+    
+    /**
+     Inizia un coordinator figlio e presenta
+     il suo rootViewController modalmente
+
+     - Parametri:
+        - childCoordinator: Il coordinator da presentare
+        - animated: Specifica se con o senza animazione modale
+     */
+    
+    func presentCoordinator(_ childCoordinator: BaseCoordinatorPresentable,
+        animated: Bool) {
+
+        add(childCoordinator: childCoordinator)
+        childCoordinator.start()
+        _rootViewController.present(childCoordinator._rootViewController, animated: animated)
+    }
+    
+    /**
+     Inizia un viewController senza coordinator e
+     lo presenta modalmente
+     
+     - Parametri:
+        - controller: Il controller da presentare
+        - animated: Specifica se con o senza animazione modale
+     */
+    
+    func present(_ controller: UIViewController, animated: Bool) {
+        _rootViewController.present(controller, animated: animated)
+    }
+    
+    /**
+     Interrompe la presentazione di un child Coordinator
+     eliminandolo anche dall'array in memoria
+
+     - Parameters:
+        - childCoordinator: Il coordinator da chiudere e rilasciare
+        - animated: Specifica se con o senza animazione modale
+        - completion: closure che viene eseguita alla vine del dismiss
+     */
+    
+    func dismissCoordinator(_ childCoordinator: BaseCoordinatorPresentable,
+        animated: Bool, completion: (() -> Void)? = nil) {
+
+        childCoordinator._rootViewController.dismiss(animated: animated,
+            completion: completion)
+        self.remove(childCoordinator: childCoordinator)
+    }
+
+}
+\end{minted}
+
+\subsection{Coordinator modale}
+
+Il BaseCoordinatorPresentable è stato definito per evitare errori di \textbf{associetedtype},
+infatti questo protocollo non deve mai essere implemetato direttamente, ma soltanto con il protocollo sucessivo
+
+\begin{minted}{swift}
+protocol CoordinatorPresentable: BaseCoordinatorPresentable {
+
+    /**
+        Questo protocolo utilizza la tipizzazione per
+        permettere di ottenere Coordinator con view
+        controller tipizzati.
+     */
+    associatedtype ViewController: UIViewController
+
+    // Il rootViewController del coordinator
+    var rootViewController: ViewController { get }
+
+}
+
+extension CoordinatorPresentable {
+
+    // Ritorna rootViewController
+    var _rootViewController: UIViewController { return rootViewController }
+}
+\end{minted}
+
+\subsection{Esempio di utilizzo}
+
+\section{Aggiunta del Navigator}

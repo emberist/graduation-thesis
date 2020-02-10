@@ -7,20 +7,29 @@
 \BOOKMARK [2][-]{subsection.2.1.1}{Tipologie di navigazione}{section.2.1}% 7
 \BOOKMARK [1][-]{section.2.2}{UIKit Dynamics}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.1}{Comportamenti base}{section.2.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Navigazione dinamica}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Il Coordinator Pattern}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{QIX Shake}{}% 12
-\BOOKMARK [0][-]{chapter.5}{Animazioni interattive}{}% 13
-\BOOKMARK [1][-]{section.5.1}{Scomposizione del requisito}{chapter.5}% 14
-\BOOKMARK [2][-]{subsection.5.1.1}{ 1. Onnipresenza delle animazioni}{section.5.1}% 15
-\BOOKMARK [2][-]{subsection.5.1.2}{ 2. Aggiunta di una gesture}{section.5.1}% 16
-\BOOKMARK [2][-]{subsection.5.1.3}{ 3. Aggiunta della gravit\340 }{section.5.1}% 17
-\BOOKMARK [2][-]{subsection.5.1.4}{ 4. La CardView modulare}{section.5.1}% 18
-\BOOKMARK [2][-]{subsection.5.1.5}{ 5. Paginazione delle animazioni}{section.5.1}% 19
-\BOOKMARK [2][-]{subsection.5.1.6}{ 5. Il Collider}{section.5.1}% 20
-\BOOKMARK [0][-]{chapter.6}{Autenticazione}{}% 21
-\BOOKMARK [1][-]{section.6.1}{Firebase Authentication}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.2}{Tipologie di autenticazione}{chapter.6}% 23
-\BOOKMARK [0][-]{chapter.7}{Dynamic Links}{}% 24
-\BOOKMARK [0][-]{chapter.8}{Conclusioni}{}% 25
-\BOOKMARK [0][-]{chapter.9}{Riconoscimenti}{}% 26
+\BOOKMARK [1][-]{section.2.3}{Delegation pattern}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.3.1}{Esempio Delegation}{section.2.3}% 11
+\BOOKMARK [0][-]{chapter.3}{Navigazione dinamica}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Il Coordinator Pattern}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.2}{Implementazione}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.2.1}{Protocolli base}{section.3.2}% 15
+\BOOKMARK [2][-]{subsection.3.2.2}{Coordinator modale}{section.3.2}% 16
+\BOOKMARK [2][-]{subsection.3.2.3}{Esempio di utilizzo}{section.3.2}% 17
+\BOOKMARK [1][-]{section.3.3}{Aggiunta del Navigator}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{QIX Shake}{}% 19
+\BOOKMARK [1][-]{section.4.1}{Cos'\350 il QIX Shake?}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.2}{Implementazione sfruttando ereditariet\340}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.3}{Implementazione con estenzione}{chapter.4}% 22
+\BOOKMARK [0][-]{chapter.5}{Animazioni interattive}{}% 23
+\BOOKMARK [1][-]{section.5.1}{Scomposizione del requisito}{chapter.5}% 24
+\BOOKMARK [2][-]{subsection.5.1.1}{ 1. Onnipresenza delle animazioni}{section.5.1}% 25
+\BOOKMARK [2][-]{subsection.5.1.2}{ 2. Aggiunta di una gesture}{section.5.1}% 26
+\BOOKMARK [2][-]{subsection.5.1.3}{ 3. Aggiunta della gravit\340 }{section.5.1}% 27
+\BOOKMARK [2][-]{subsection.5.1.4}{ 4. La CardView modulare}{section.5.1}% 28
+\BOOKMARK [2][-]{subsection.5.1.5}{ 5. Paginazione delle animazioni}{section.5.1}% 29
+\BOOKMARK [2][-]{subsection.5.1.6}{ 5. Il Collider}{section.5.1}% 30
+\BOOKMARK [0][-]{chapter.6}{Autenticazione}{}% 31
+\BOOKMARK [1][-]{section.6.1}{Firebase Authentication}{chapter.6}% 32
+\BOOKMARK [1][-]{section.6.2}{Tipologie di autenticazione}{chapter.6}% 33
+\BOOKMARK [0][-]{chapter.7}{Dynamic Links}{}% 34
+\BOOKMARK [0][-]{chapter.8}{Conclusioni}{}% 35

@@ -136,7 +136,7 @@ attraverso la seguente funzione:
 % dei comportamenti fisici predefiniti.
 
 \subsection{Comportamenti base}
-
+Definiamo \textbf{DynamicItem} qualsiasi vista a cui viene assegnato un \textbf{UIDynamicBehavior}.
 Ogni animator attraverso il metodo addBehavior puà assegnare a determinate
 viste comportamenti fisici elencati sei seguito: 
 
@@ -160,3 +160,73 @@ Di seguito un esempio di implementazione degli strumenti UIDynamics in QIX
     }
     \label{fig:6}
 \end{minipage}\\
+
+\section{Delegation pattern}\label{delegation}
+
+Il \textbf{Delegation pattern} è una delle strutture più usate nelle app iOS in particolare in QIX
+è stato molto sfruttato per la comunicazione tra ViewControler e Coordinator.
+
+Tale pattern non è altro che un insieme di interfacce e metodi che
+vengono progettate per publicizzare con il resto dell'applicazione degli eventi che avvengono in uno specifico ViewController
+
+In Swift le interfaccie si utilizzano attraverso la Keyword \textbf{protocol}, questi oggetti possono contenere metodi, variabili, closure
+e sono molto utili per la definizione di strutture dinamiche tipizzate.
+
+\subsection{Esempio Delegation}
+
+Un semplice esempio potrebbe essere un ViewController che vuole
+pubblicizzare la pressione di un buttone e dall'altra parte il coordinator
+che viene notificato e agirà di conseguenza:
+
+\begin{minted}{swift}
+
+// ------------- View controller -------------
+// Interfaccia per la definizione delle API
+protocol ExampleViewControllerDelegate {
+    func exampleViewController(_ controller: UIViewController,
+        didPressButton button: Any)
+}
+
+class ExampleViewController: UIViewController {
+
+    // Istanza opzionale del delegate
+    weak var delegate: ExampleViewControllerDelegate?
+
+    // Evento di pressione del bottone
+    @IBAction func buttonPressed(_ sender: Any) {
+        // Se istanziato il delegate lancia la funzione
+        self.delegate?.exampleViewController(self,
+            didPressButton: sender)
+    }
+}
+
+// ------------- Coordinator -------------
+class ExampleCoordinator: Coordinator {
+
+    private var exampleViewController: ExampleViewController
+
+    func init() {
+        let exampleViewController = ExampleViewController()
+        self.exampleViewController = exampleViewController
+
+        // Presentazione modale dell'exampleViewController
+        self.present(exampleViewController, animated: true)
+    }
+
+    func start() {
+        // Impostazione del delegate
+        exampleViewController.delegate = self
+        // ...
+    }
+}
+
+extension ParentViewController: ExampleViewControllerDelegate {
+    func exampleViewController(_ controller: UIViewController,
+        didPressButton button: Any){
+        
+        // Handling della pressione del bottone
+    }
+}
+\end{minted}
+
+Nell'esempio è in parte utilizzato anche il Coordinator Pattern che spiegherò al capitolo~\ref{CH:3}.

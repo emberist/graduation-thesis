@@ -1,13 +1,85 @@
+
+\section{Cos'è il QIX Shake?}
+
 In iOS ogni UIViewController risponde a degli eventi. L'evento designato per lo shake è
 \begin{minted}{swift}
     func motionEnded(_ motion: UIEvent.EventSubtype,
         with event: UIEvent?)
 \end{minted}
 
-In caso di shake infatto motion sarà uguale a .motionShake
-Per rendere disponibile l'evento "shake" in un qualunque ViewController la soluzione è stata abbastanza semplice:
-è bastato l'utlizzo di un ViewController Genitore e attrvaerso l'eriditarietà ogni view controller è in grado
+In caso di shake infatto motion sarà uguale a .motionShake. \\
+
+Inizialmente per rendere disponibile l'evento "shake" in un qualunque ViewController la soluzione è stata abbastanza semplice:
+è bastato l'utilizzo di un ViewController genitore e attraverso l'eriditarietà ogni view controller è stato in grado
 di eseguire la stessa funzionalità.
 
-In questo caso è stato optato l'utilizzo delle notifiche locali: quando avviene uno shake i view controller inviano una notifica 
-globale e solo gli observer vi hanno accesso.
+Successivimanete sono stati riscontrati dei problemi, dato che con il sempre più altro grado di complessità
+ogni vista avrebbe dovuto ereditare una classe base. In alcuni casi questo non era possibile, ho quindi optato 
+per un'\textbf{estensione} della classe UIViewController e un semplice protocolo che aggiunge agli elementi che lo eridatono
+una closure opzionale.
+
+Per notificare l'avvenuta del QIX Shake ho utilizzato delle notifiche locali: quando avviene uno shake il ViewController interessato invia 
+una notifica globale e, nel mio caso, solamente l'AppCoordinator riceverà tale notifica.
+Si nota anche che questa notifica contiene un campo \textbf{sender} che indentifica il ViewController da cui viene lanciata e quindi
+il \textbf{contesto attuale} dell'utente
+
+\section{Implementazione sfruttando ereditarietà}
+
+\begin{minted}{swift}
+class BaseViewController: UIViewController {
+
+    override open func motionBegan(_ motion: UIEvent.EventSubtype,
+        with event: UIEvent?) {
+            
+        if motion == .motionShake {
+            let notification = Notification(
+                name: Notification.Name.UserDidShake,
+                userInfo: ["sender": self]
+            )
+            NotificationQueue.default.enqueue(notification,
+                postingStyle: .asap)
+        }
+    }
+}
+\end{minted}
+
+Sebbene questo metodo sia semplice e funzioni, quello mostrato di seguita
+risulta migliore per gli scopi voluti.
+
+% \newpage
+\section{Implementazione con estenzione}
+
+\begin{minted}{swift}
+protocol Shakerable {
+    var shakeAction: ShakeClousure? { get }
+}
+
+extension UIViewController {
+   
+    override open func motionBegan(_ motion: UIEvent.EventSubtype,
+        with event: UIEvent?) {
+
+        if motion == .motionShake {
+            let notification = Notification(
+                name: Notification.Name.UserDidShake,
+                userInfo: ["sender": self]
+            )
+            
+            NotificationQueue.default.enqueue(notification,
+                postingStyle: .asap)
+            
+            if let shakerable = self as? Shakerable {
+                shakerable.shakeAction?(self)
+            }
+        }
+    }
+}
+\end{minted}
+
+L'esempio riportato qui sopra è molto simile a quello precedente, ma utilizzando le estensioni
+ogni UIViewController erediterà questo metodo sovrascritto senza dover far eridatere a tutti i ViewController
+una classe aggiuntiva, anche perchè, come abbiamo definito in precedenza, il QIX Shake deve essere disponibile
+ovunque. 
+
+Un altro fattore interessante è il protocollo \textbf{Shakerable} dato che tutti i ViewController che lo implementano
+possono, attraverso la shakeAction closure, eseguire ciò che devono a seguito di uno shake.
