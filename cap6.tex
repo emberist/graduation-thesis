@@ -1,20 +1,22 @@
-\section{Firebase Authentication}
-
-\section{Tipologie di autenticazione}
 
 Per la progettazionde dell'autenticazione si è voluto ricorrere a qualcosa di 
 già pronto per velocizzare i tempi di sviluppo e quindi evitare di progettare e implementare un sistema 
 complesso come la gestione di utenti non autenticati (Guest).
+Cercando in rete abbiamo optato per l'utilizzo di \textbf{Firebase}\cite{firebase}
 
-Cercando in rete abbiamo optato per l'utilizzo di \textbf{Firebase}\cite{firebase}: ossia una piattaforma
+\section{Firebase Authentication}
+
+Firebase è una piattaforma
 di sviluppo per applicazione mobili e web acquisita di Google nel 2014. 
 Uno dei motivi fondamentali per cui è stata scelta è la grande quantità di servizi utili come
 analisi dei Crash, tracking della naviazione degli utenti, DynamicLinks (si veda sezione~\ref{section:dynamiclinks})
 e ovviamente l'autenticazione.
 
+\section{Tipologie di autenticazione}
+
 Esistono 3 tipologie di autenticazione come definito nel requisito, ognuna della quali è un'estensione
 di quella precedente: un utente che apre per la prima volta l'applicazione verrà subito registrato 
-come utente anonimo e quindi in \textbf{Trial Mdoe}, se poi decide di effettuare la registrazione può inserire 
+come utente anonimo e quindi in \textbf{Trial Mode}, se poi decide di effettuare la registrazione può inserire 
 il suo numero di telefono o la sua email e attraverso Firebase l'utente anonimo evolverà in un utente con più
 informazioni, in \textbf{Signed Mode}.
 
@@ -58,4 +60,4 @@ Collegamento di un account anonimo con numero di telefono o email
 \end{minted}
 
 Il linking con un qualunque social media è simile all'esempio riportato
-qui sopra, cambiare soltanto il Provider delle credenziali
+qui sopra, cambia soltanto il Provider delle credenziali

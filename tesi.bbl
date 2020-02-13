@@ -41,14 +41,14 @@ Apple Inc.
 \newblock
   \url{https://developer.apple.com/documentation/uikit/animation_and_haptics/uikit_dynamics}.
 
-\bibitem{coordinatorpattern}
-Soroush Khanlou.
-\newblock Introdotto nel 2015 alla nsspain conference.
-
 \bibitem{uiwindow}
 Apple Inc.
 \newblock Uiwindow.
 \newblock \url{https://developer.apple.com/documentation/uikit/uiwindow}.
+
+\bibitem{coordinatorpattern}
+Soroush Khanlou.
+\newblock Introdotto nel 2015 alla nsspain conference.
 
 \bibitem{lottie}
 Airbnb Inc.

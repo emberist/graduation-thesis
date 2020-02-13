@@ -50,7 +50,7 @@ o metodologia utilizzata:
 
     \item\label{animationenum:2} Ogni CardView deve essere trascinabile dall'utente;
     
-    \item\label{animationenum:3} Quando l'utente usa una forza di trascinamento superiore a un valore di soglia tutte le viste devono
+    \item\label{animationenum:3} Nel momento in cui l'utente usa una forza di trascinamento superiore a un valore di soglia tutte le viste devono
         cadere per gravità;
 
     \item\label{animationenum:4} Ogni CardView mostrerà un contenuto dinamico differente e definito da dei componenti
@@ -68,44 +68,129 @@ o metodologia utilizzata:
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %                      Onnipresenza delle animazioni                    %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\subsection{~\ref{animationenum:1}. Onnipresenza delle animazioni}
-
-\textbf{Premessa}: il contenuto di ogni applicazione iOS è inserito all'interno di un oggetto denominato
-\textbf{UIWindow}\cite{uiwindow}. Questa finestra è disponibile in ogni UIViewController e permette di aggiungere contenuti
-come viste o interi UIViewController al di sopra di tutto il contesto dell'app. Questo rende essenzialmente ogni contenuto presentato
-indipendente per esempio da un stack di navigazione.\\ 
+\subsection{~\ref{animationenum:1}. Presentazione delle animazioni}
 
 Per creare animazioni definite dal contesto usiamo quindi un semplice UIViewController che gestirà tutte le animazioni,
-ma invece di presentarlo attraverso i metodi base visti alla sezione~\ref{sec:navigation}, lo presentiamo al di sopra della UIWindow,
+ma invece di presentarlo attraverso i metodi base visti alla sezione~\ref{sec:navigation}, lo presentiamo al di sopra della \textbf{UIWindow} (vedere sezione~\ref{sec:uiwindow}),
 in modo da non essere vincolati dal contesto dell'utente quando l'animazione finirà, ma allo stesso tempo
-consente di controllare l'inizializzazione di questo UIViewController in base al contesto.
+consentire il controllo dell'inizializzazione del UIViewController in base al contesto attuale.
+
+\subsection{Aggiunta del ViewController nella\\UIWindow}
+
+L'animazione viene inizializzata nel ViewController, in questo caso \textbf{mainViewController},
+genitore di tutto il contesto, in modo da avere il controllo su tutto 
+il contesto. Questo perchè tutti i ViewController nello stack di navigazione possono
+essere chiusi a seguito di un qualunque eventi dell'animazione, avendo così un controllo molto accuranto
+del contenuto che l'utente visualizzerà alla fine dell'animazione.
+
+\begin{minted}{swift}
+let keyWindow: UIWindow?
+
+if #available(iOS 13.0, *) {
+    keyWindow = UIApplication.shared.connectedScenes
+    .filter({$0.activationState == .foregroundActive})
+    .map({$0 as? UIWindowScene})
+    .compactMap({$0})
+    .first?.windows
+    .filter({$0.isKeyWindow}).first
+} else {
+    keyWindow = UIApplication.shared.keyWindow
+}
+
+mainViewController.addChild(currentAnimationViewController!)
+
+// Aggiungiamo la vista del nostro viewController alla UIWindow
+keyWindow?.addSubview(currentAnimationViewController!.view)
+
+// Rimuoviamo il viewController
+currentAnimationViewController!.didMove(toParent: mainViewController)
+\end{minted}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %                        CardView trascinabile                          %
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\subsection{~\ref{animationenum:2}. Aggiunta di una gesture}
+\subsection{~\ref{animationenum:2}. Aggiunta di una gesture}\label{gestureimplemention}
 
-In iOS per interagire con le viste attraverso il display touch screen si utilizzano delle UIGestureRecognizer.
-Tali strumenti sono nativi e offrono diverse tipologie per l'iterazione:
-\begin{itemize}
-    \item UITapGestureRecognizer: respansabile della gestione dei tap
+Per un'animazione che ha necessità di muoversi come se l'utente la stesse spostando trascinando sullo schermo occore una \textbf{UIPanGestureRecognizer}.
+Dalla doumentazione delle UIGestureRecognizer viene spiegato che ogni vista "draggabile" necessita una  e solo una gesture,
+per questo ogni card view dovrà averne una diversa. Di seguito il codice di implementazione
 
-    \item UIPinchGestureRecognizer: respansabile della gestione del pitch ossia la gesture spesso usata per lo zoom
-    
-    \item UIRotationGestureRecognizer: respansabile della gestione delle rotazioni
-    
-    \item UISwipeGestureRecognizer: responsabile di uno swipe ossia un trascinamento in una direzione molto breve
-    
-    \item UIPanGestureRecognizer: responsabile del drag and drop
-    
-    \item UIScreenEdgePanGestureRecognizer: responsabile di uno swipe ossia un trascinamento nei bordi dello schermo
-    
-    \item UILongPressGestureRecognizer: responsabile di una prossione prolungata nel tempo
-\end{itemize}
+\begin{minted}{swift}
+// Durante il settaggio delle cardview
+// aggiungo la vista alla parentView
+parentView.addSubview(view)
 
-Per un'animazione che ha necessità di muoversi come se l'utente la stesse spostando occore una UIPanGestureRecognizer.
-Dalla doumentazione delle UIGestureRecognizer viene spiegato che ohni vista "draggabile" necessiata una gesture,
-per questo ogni card view dovrà averne una.
+// Creo la gesture
+let panGesture = UIPanGestureRecognizer(target: target, action: action)
+
+// Assegno un nome che verrà utilizzato come lock
+// per impedire la concorrenza di due gesture differenti
+panGesture.name = "gesture-\(index)"
+
+// Aggiungo la gesture alla cardView
+cardView.addGestureRecognizer(panGesture)
+\end{minted}
+
+I parametri target e action sono rispettivamente il viewController che gestisce la gesture e il metodo
+che deve essere eseguito quando avviene una PanGesture.
+Di seguito l'implementazione del metodo handlePan che gestisce tutte le gesture di una stessa pagina.
+
+\begin{minted}{swift}
+private let activeGesture = nil
+
+// Metodo chiamato dalla UIPanGesture
+@objc private func handlePan(_ recognizer: UIPanGestureRecognizer) {
+    // Lock per evitare che due gesture funzionino in contemporanea
+    if let gestureName = activeGesture, recognizer.name != gestureName {
+        return
+    } else {
+        activeGesture = recognizer.name
+    }
+    
+    // CardView che viene mossa dall'utente
+    let animatedView = recognizer.view!
+    
+    // Coordinate del punto di tocco rispetto alla vista principale
+    let touchPointInView = recognizer.location(in: self.view)
+
+    // Coordinate del punto di tocco rispetto alla cardView
+    let touchPointInAlert = recognizer.location(in: animatedView)
+    let velocity = recognizer.velocity(in: self.view)
+    
+    // Ottengo l'offset rispetto al centro della cardView
+    let offset = UIOffset(
+        horizontal: touchPointInAlert.x - animatedView.bounds.midX,
+        vertical: touchPointInAlert.y - animatedView.bounds.midY
+    )
+
+    // Aggingo i comportamenti iniziali
+    self.createPageDynamicBehaviours()
+    self.addCheckForDismiss()
+    
+    // Attivo e disattivo i comportamenti del UIDynamicAnimator
+    // in base agli stati delle PanGesture
+    switch recognizer.state {
+    case .began:
+        self.configureForStartDragging(animatedView,
+            with: offset,
+            touchPointInView: touchPointInView,
+            touchPointInAlert: touchPointInAlert
+        )
+    case .changed:
+        // Sposto la cardView attraverso un attachmentBehavior
+        dragAttachmentBehavior.anchorPoint = touchPointInView
+    case .cancelled, .ended, .failed:
+        self.configureForFinishDragging(animatedView,
+            with: velocity,
+            offset: offset
+        )
+        // Disattivo il lock
+        activeGesture = nil
+    default:
+        break
+    }
+}
+\end{minted}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %                        Gravity                                     %
@@ -171,6 +256,64 @@ dopo l'altro attraveso una vista chiamata ModularCardView, di seguito, in figura
     \label{fig:7}
 \end{minipage}\\
 
+Dopo aver creato ogni componente separatamente ho creato la \textbf{ModularCardView},
+questa vista attraverso un array di UIView, ossia i componenti, utilizza dei constraints 
+per assemblarli insieme. Vediamo di seguito il metodo \textbf{build}:
+
+\begin{minted}{swift}
+// Creo un array di constraints
+var constraints = [NSLayoutConstraint]()
+    
+// Creo un loop enumerato sull'array dei componenti
+for (index, view) in components.enumerated() {
+    // Disabilito l'autoresizing mask automatico
+    view.translatesAutoresizingMaskIntoConstraints = false
+    
+    // Aggiugo il componente alla ModulaCardView
+    self.addSubview(view)
+    
+    // Aggiungi i constraint a destra e sinistra
+    constraints.append(contentsOf: [
+        view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+        view.trailingAnchor.constraint(equalTo: self.trailingAnchor)
+    ])
+    
+    if components.count > 1 {
+
+        if index == 0 {
+            // Al primo componente setto il top della ModulaView
+            constraints.append(
+                view.topAnchor.constraint(equalTo: self.topAnchor)
+            )
+        } else {
+            // Ai sucessivi setto top anchor il bottom
+            // anchor dell'elemento precedente
+            let bottomAnchor = components[index - 1].bottomAnchor
+            constraints.append(
+                view.topAnchor.constraint(equalTo: bottomAnchor)
+            )
+        }
+        
+        // Se è l'ultimo componente gli aggiugo un constraint
+        // alla fine della ModularView
+        if index == components.count - 1 {
+            constraints.append(
+                view.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            )
+        }
+    } else {
+        // Esiste un solo componente,
+        // gli setto i constraint sopra e sotto
+        constraints.append(contentsOf: [
+            view.topAnchor.constraint(equalTo: self.topAnchor),
+            view.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+        ])
+    }
+}
+
+// Attivo tutto i constraints
+NSLayoutConstraint.activate(constraints)
+\end{minted}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %                   La paginazione delle animazioni                     %
@@ -184,6 +327,7 @@ l'intera paginagione al view controller. \\
 In particolare questo UIViewController accetta come variabile di inizializzazione
 un array di pagine e in base allo stato della UIPanGestureRecognir deciderà se passare alla pagina successiva
 o interrompere l'animazione;
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %                   La paginazione delle animazioni                     %

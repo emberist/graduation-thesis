@@ -12,8 +12,8 @@ Generalmente in iOS l'intera logica di un ViewController viene scritta nel contr
 file di grosse dimensioni e disordine generale. Il Coordinator Pattern è nato proprio per rendere 
 le applicazioni più scalabili e leggere. 
 
-Ogni ViewController infatti delega tutte le decisioni al suo Coordinator, attraverso il Delegation Pattern (vedere sezione~\ref{delegation}), che in base a determinate logiche deciderà
-i passi successivi.
+Ogni ViewController infatti delega tutte le decisioni al suo Coordinator usando il Delegation Pattern (vedere sezione~\ref{delegation}) che in base alle logiche
+della vista in questione deciderà i passi successivi.
 
 Ogni Coordinator può controllare un ViewController o più Coordinator, questo rende le viste
 indipendenti tra di loro e rende ogni ViewControler totalmente invisibile agli altri.\\
@@ -46,8 +46,8 @@ per la gestione di una lista di prodotti e il carrello. \\
     \label{fig:5}
 \end{minipage}\\ \\
 
-Come si evince dall'immagine è presente in entrambi i coordinator è presente un oggetto
-\textbf{navigator} che sarà in gestore di un UINavigationController
+Come si evince dalla figura~\ref{fig:5} è presente in entrambi i coordinator un oggetto
+\textbf{navigator} che sarà il proxy di un generico UINavigationController
 
 \section{Implementazione}
 
@@ -179,7 +179,9 @@ protocol CoordinatorPresentable: BaseCoordinatorPresentable {
 extension CoordinatorPresentable {
 
     // Ritorna rootViewController
-    var _rootViewController: UIViewController { return rootViewController }
+    var _rootViewController: UIViewController {
+        return rootViewController
+    }
 }
 \end{minted}
 

@@ -1,14 +1,4 @@
 
-% Analizzando il requisito mi sono posto diverse domande: \\ \\
-% \noindent{
-%     \large\textit{Cosa significa dinamicamente?}
-%     \normalsize{Il nostro obiettivo in questo caso è mostrare all'utente \textbf{contenuti diversi}
-%     indipendentemente dal constesto e quindi dalla vista in cui si trova}\\ \\
-%     \large\textit{Quale contesto?}
-%     \normalsize{Con contesto dell'utente si intende lo stato attuale dell'applicazione,
-%     quindi l'intero stack di navigazione se presente;
-%     } \\ \\
-% }
 
 Prima di entrare nel merito delle soluzioni e problemi affrontati, elenco brevemente gli strumenti
 base di iOS che mi sono stati utile nella progettazione e implementazione finale.
@@ -42,7 +32,11 @@ Esistono tre tipologie base di navigazione:
 
 \begin{enumerate}
     \item{\textbf{Push}: un UIViewController figlio di un NavigationController può rendere
-    visibile un altro ViewController attraverso la funzione "pushViewController" di un Navigation controller\par
+    visibile un altro ViewController attraverso la funzione 
+    "pushViewController" di un Navigation controller. Ogni UIViewController ha
+    infatti un puntatore al UINavigationController genetore, che gestisce la navigazione.
+
+    \par
     \begin{minipage}{\linewidth}
         \centering
         \includegraphics[width=10cm]{push}
@@ -51,7 +45,9 @@ Esistono tre tipologie base di navigazione:
     \end{minipage}
     }
     \item{ \textbf{Modal}: un ViewController può presentare un altro ViewController senza necessariamente avere un 
-        Navigation Controller, l'animazione standard è dal basso verso l'alto come in figura~\ref{fig:3}\par
+        Navigation Controller, l'animazione standard è dal basso verso l'alto come in figura~\ref{fig:3}. La navigazione modale viene
+        usata solitamente per la presentazione di task che richiedono una sola operazione oppure per rendere evidente un cambio del contesto precedente.
+        \par
         \begin{minipage}{\linewidth}
             \centering
             \includegraphics[width=10cm]{modal}
@@ -62,7 +58,8 @@ Esistono tre tipologie base di navigazione:
         \end{minipage}
     }
     \item{\textbf{Segue}: Una segue non è altro che un link tra due view controller attraverso un'interfaccia
-        grafica. In base alla tipologia cambia il tipo di navigazione (Modal o Push)
+        grafica. In base alla tipologia cambia il tipo di navigazione (Modal o Push). Le segue vengono utilizzate programmaticamente o nei file \textbf{storyboard}, in cui
+        ogni ViewController viene "disegnato", e poi linkato ad altri ViewController.
     }
 \end{enumerate}
 
@@ -136,6 +133,7 @@ attraverso la seguente funzione:
 % dei comportamenti fisici predefiniti.
 
 \subsection{Comportamenti base}
+
 Definiamo \textbf{DynamicItem} qualsiasi vista a cui viene assegnato un \textbf{UIDynamicBehavior}.
 Ogni animator attraverso il metodo addBehavior puà assegnare a determinate
 viste comportamenti fisici elencati sei seguito: 
@@ -160,6 +158,21 @@ Di seguito un esempio di implementazione degli strumenti UIDynamics in QIX
     }
     \label{fig:6}
 \end{minipage}\\
+
+\section{UIWindow}\label{sec:uiwindow}
+
+Il contenuto di ogni applicazione iOS è inserito all'interno di un oggetto denominato
+\textbf{UIWindow}\cite{uiwindow}. Questa finestra è disponibile in ogni UIViewController e permette di aggiungere contenuti
+come viste o interi UIViewController al di sopra di tutto il contesto dell'app. Questo rende essenzialmente ogni contenuto presentato
+indipendente per esempio da un stack di navigazione.
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=8cm]{uiwindow}
+    \captionof{figure}{Rappresentazione dell UIWindow}
+    \label{fig:7}
+\end{minipage}\\
+
 
 \section{Delegation pattern}\label{delegation}
 
@@ -230,3 +243,27 @@ extension ParentViewController: ExampleViewControllerDelegate {
 \end{minted}
 
 Nell'esempio è in parte utilizzato anche il Coordinator Pattern che spiegherò al capitolo~\ref{CH:3}.
+
+\section{UIGestureRecognizer}
+
+In iOS per interagire con le viste attraverso il display touch screen si utilizzano delle UIGestureRecognizer.
+Tali strumenti sono nativi e offrono diverse tipologie per l'iterazione:
+
+\begin{itemize}
+    \item UITapGestureRecognizer: respansabile della gestione dei tap
+
+    \item UIPinchGestureRecognizer: respansabile della gestione del pitch ossia la gesture spesso usata per lo zoom
+    
+    \item UIRotationGestureRecognizer: respansabile della gestione delle rotazioni
+    
+    \item UISwipeGestureRecognizer: responsabile di uno swipe ossia un trascinamento in una direzione molto breve
+    
+    \item UIPanGestureRecognizer: responsabile del drag and drop
+    
+    \item UIScreenEdgePanGestureRecognizer: responsabile di uno swipe ossia un trascinamento nei bordi dello schermo
+    
+    \item UILongPressGestureRecognizer: responsabile di una prossione prolungata nel tempo
+\end{itemize}
+
+In QIX è stata usata una UIPanGestureRecognizer per la gestione del trascinamento delle CardView animate.
+L'implementazione è mostrata nella sezione~\ref{gestureimplemention}
