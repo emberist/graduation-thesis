@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  13 FEB 2020 21:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  18 FEB 2020 22:34
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -465,6 +465,9 @@ runsystem(rm tesi.aex)...executed.
 
  (./tesi.aux
 
+LaTeX Warning: Label `fig:6' multiply defined.
+
+
 LaTeX Warning: Label `fig:7' multiply defined.
 
 )
@@ -774,7 +777,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/logo.png, id=156, 313.17pt x 313.17pt>
+<images/logo.png, id=160, 313.17pt x 313.17pt>
 File: images/logo.png Graphic file (type png)
 <use images/logo.png>
 Package pdftex.def Info: images/logo.png  used on input line 5.
@@ -862,7 +865,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--21
 
  []
 
-<images/navigation.jpg, id=285, 421.575pt x 324.21124pt>
+<images/navigation.jpg, id=290, 421.575pt x 324.21124pt>
 File: images/navigation.jpg Graphic file (type jpg)
 <use images/navigation.jpg>
 Package pdftex.def Info: images/navigation.jpg  used on input line 24.
@@ -883,7 +886,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [5
 
 ]
-<images/push.png, id=293, 1342.01375pt x 723.70375pt>
+<images/push.png, id=298, 1342.01375pt x 723.70375pt>
 File: images/push.png Graphic file (type png)
 <use images/push.png>
 Package pdftex.def Info: images/push.png  used on input line 42.
@@ -895,7 +898,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 See the caption package documentation for explanation.
 
 [6 <./images/navigation.jpg> <./images/push.png>]
-<images/modal.png, id=304, 1162.3425pt x 769.87625pt>
+<images/modal.png, id=309, 1162.3425pt x 769.87625pt>
 File: images/modal.png Graphic file (type png)
 <use images/modal.png>
 Package pdftex.def Info: images/modal.png  used on input line 53.
@@ -916,7 +919,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/b/n' tried instead on input line 2.
 )
-<images/animation.png, id=316, 322.20375pt x 322.20375pt>
+<images/animation.png, id=322, 322.20375pt x 322.20375pt>
 File: images/animation.png Graphic file (type png)
 <use images/animation.png>
 Package pdftex.def Info: images/animation.png  used on input line 155.
@@ -938,7 +941,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--161
  []
 
 [8]
-<images/uiwindow.png, id=325, 1169.36874pt x 927.465pt>
+<images/uiwindow.png, id=330, 1169.36874pt x 927.465pt>
 File: images/uiwindow.png Graphic file (type png)
 <use images/uiwindow.png>
 Package pdftex.def Info: images/uiwindow.png  used on input line 171.
@@ -977,7 +980,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--20
 
  []
 
-<images/coordinator.png, id=362, 583.17876pt x 231.86626pt>
+<images/coordinator.png, id=367, 583.17876pt x 231.86626pt>
 File: images/coordinator.png Graphic file (type png)
 <use images/coordinator.png>
 Package pdftex.def Info: images/coordinator.png  used on input line 23.
@@ -1015,7 +1018,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
-<images/coordinator-example.png, id=370, 1023.825pt x 502.87875pt>
+<images/coordinator-example.png, id=375, 1023.825pt x 502.87875pt>
 File: images/coordinator-example.png Graphic file (type png)
 <use images/coordinator-example.png>
 Package pdftex.def Info: images/coordinator-example.png  used on input line 42.
@@ -1055,7 +1058,40 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [19])
 \openout3 = `tesi.pyg'.
 
- (./_minted-tesi/2CD87C336314E3DD0CF2B3C4F3352FC2E28028BAEFE52935A106A4D786FABC0A.pygtex)) [20]
+ (./_minted-tesi/2CD87C336314E3DD0CF2B3C4F3352FC2E28028BAEFE52935A106A4D786FABC0A.pygtex)
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/6C4FBDDF2E999C817305C5E9DB2110D4E28028BAEFE52935A106A4D786FABC0A.pygtex [20] [21])
+Underfull \hbox (badness 10000) in paragraph at lines 239--243
+
+ []
+
+<images/qix_coord.png, id=406, 508.90125pt x 183.68625pt>
+File: images/qix_coord.png Graphic file (type png)
+<use images/qix_coord.png>
+Package pdftex.def Info: images/qix_coord.png  used on input line 246.
+(pdftex.def)             Requested size: 284.52756pt x 102.70381pt.
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 249.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 244--252
+[]$[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--252
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 244--252
+
+ []
+
+) [22 <./images/qix_coord.png>]
 Capitolo 4.
 (./cap4.tex
 \openout3 = `tesi.pyg'.
@@ -1065,7 +1101,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
-[21
+[23
 
 ]
 Overfull \hbox (3.5045pt too wide) in paragraph at lines 26--26
@@ -1077,27 +1113,27 @@ Overfull \hbox (3.5045pt too wide) in paragraph at lines 26--26
 (./_minted-tesi/B6E51488E87952952B5483AC95D7268CE28028BAEFE52935A106A4D786FABC0A.pygtex)
 \openout3 = `tesi.pyg'.
 
- (./_minted-tesi/674D27ACF2ACCA0D184F7C4809289076E28028BAEFE52935A106A4D786FABC0A.pygtex [22])) [23] [24
+ (./_minted-tesi/674D27ACF2ACCA0D184F7C4809289076E28028BAEFE52935A106A4D786FABC0A.pygtex [24])) [25] [26
 
 ]
 Capitolo 5.
-(./cap5.tex [25]
+(./cap5.tex [27]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 78.
 
 \openout3 = `tesi.pyg'.
 
-(./_minted-tesi/20D2CD4B8A8E7CEB0714265743787052E28028BAEFE52935A106A4D786FABC0A.pygtex [26])
+(./_minted-tesi/20D2CD4B8A8E7CEB0714265743787052E28028BAEFE52935A106A4D786FABC0A.pygtex [28])
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/4255AC38AA1279B015233823424B48E3E28028BAEFE52935A106A4D786FABC0A.pygtex)
 \openout3 = `tesi.pyg'.
 
- (./_minted-tesi/9E0B7640E63E1851456B6D3C3888062DE28028BAEFE52935A106A4D786FABC0A.pygtex [27]
+ (./_minted-tesi/9E0B7640E63E1851456B6D3C3888062DE28028BAEFE52935A106A4D786FABC0A.pygtex [29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28])
+ [30])
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/21185D41F9738281025D0AC9C036273EE28028BAEFE52935A106A4D786FABC0A.pygtex)
@@ -1105,13 +1141,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
-[29]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 247--249
 
  []
 
-[30]
-<images/an12.png, id=451, 1129.21875pt x 1222.5675pt>
+[32]
+<images/an12.png, id=468, 1129.21875pt x 1222.5675pt>
 File: images/an12.png Graphic file (type png)
 <use images/an12.png>
 Package pdftex.def Info: images/an12.png  used on input line 252.
@@ -1134,25 +1170,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--258
 
 \openout3 = `tesi.pyg'.
 
-(./_minted-tesi/8FA6E6E9870CCE33732AD984CFBFAA70E28028BAEFE52935A106A4D786FABC0A.pygtex [31 <./images/an12.png>]
+(./_minted-tesi/8FA6E6E9870CCE33732AD984CFBFAA70E28028BAEFE52935A106A4D786FABC0A.pygtex [33 <./images/an12.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32])
+ [34])
 Underfull \hbox (badness 10000) in paragraph at lines 323--326
 
  []
 
 \openout3 = `tesi.pyg'.
 
-(./_minted-tesi/34B3CEA40962F35C06B7454B5E69035AE28028BAEFE52935A106A4D786FABC0A.pygtex)) [33] [34
+(./_minted-tesi/34B3CEA40962F35C06B7454B5E69035AE28028BAEFE52935A106A4D786FABC0A.pygtex)) [35] [36
 
 ]
 Capitolo 6.
-(./cap6.tex
-
-LaTeX Warning: Reference `section:dynamiclinks' on page 35 undefined on input line 12.
-
-[35]
+(./cap6.tex [37]
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/01063FFF82839E1F23DB8E43231A549BE28028BAEFE52935A106A4D786FABC0A.pygtex)
@@ -1161,13 +1193,23 @@ LaTeX Warning: Reference `section:dynamiclinks' on page 35 undefined on input li
  (./_minted-tesi/9E98D552DA207BFB8CBF197D5D9E0860E28028BAEFE52935A106A4D786FABC0A.pygtex)
 \openout3 = `tesi.pyg'.
 
- (./_minted-tesi/610B09BCA25313B9AE46C1758F953E4EE28028BAEFE52935A106A4D786FABC0A.pygtex)) [36]
+ (./_minted-tesi/610B09BCA25313B9AE46C1758F953E4EE28028BAEFE52935A106A4D786FABC0A.pygtex)) [38]
 Capitolo 7.
-(./cap7.tex) [37
+(./cap7.tex
 
-] [38
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 22.
 
-] (./conclusioni.tex) (./tesi.bbl [39] [40
+\openout3 = `tesi.pyg'.
+
+(./_minted-tesi/D24C79C686EA00D9669961DAF4C557D0E28028BAEFE52935A106A4D786FABC0A.pygtex [39
+
+]) [40]
+\openout3 = `tesi.pyg'.
+
+ (./_minted-tesi/CA3416DDD8EAEFEEC3E335CE1B009EEFE28028BAEFE52935A106A4D786FABC0A.pygtex)) [41] [42
+
+] (./conclusioni.tex) (./tesi.bbl [43] [44
 
 ]
 Underfull \hbox (badness 1142) in paragraph at lines 22--26
@@ -1184,23 +1226,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--48
 []\OT1/cmr/m/n/12 (+20) Apple Inc.  Ui-win-dow.  []$\OT1/cmtt/m/n/12 https : / / developer . apple . com /
  []
 
-) [41] [42
+) [45] [46
 
 ] (./tesi.lof)
 \tf@lof=\write7
 \openout7 = `tesi.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
- [43]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 179.
+ [47]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 179.
  (./tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 179.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 179.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: AE920DA318C1A44E2125E70C7F08289C;2570.
-
-
-LaTeX Warning: There were undefined references.
+(rerunfilecheck)             Checksum: E7DC86CA30146B9A5132941C98A7ED72;2659.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1209,18 +1248,18 @@ runsystem(rm tesi.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 16062 strings out of 492616
- 262595 string characters out of 6129482
- 452105 words of memory out of 5000000
- 19421 multiletter control sequences out of 15000+600000
- 18753 words of font info for 111 fonts, out of 8000000 for 9000
+ 16087 strings out of 492616
+ 263738 string characters out of 6129482
+ 452326 words of memory out of 5000000
+ 19428 multiletter control sequences out of 15000+600000
+ 18802 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,8n,40p,857b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmttb10.720pk>{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmbcsc10.1244pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on tesi.pdf (49 pages, 3636525 bytes).
+Output written on tesi.pdf (53 pages, 3651265 bytes).
 PDF statistics:
- 673 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 130 named destinations out of 1000 (max. 500000)
- 24414 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 701 PDF objects out of 1000 (max. 8388607)
+ 552 compressed objects within 6 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 24427 words of extra memory for PDF output out of 24883 (max. 10000000)
 

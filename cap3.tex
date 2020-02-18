@@ -185,6 +185,71 @@ extension CoordinatorPresentable {
 }
 \end{minted}
 
-\subsection{Esempio di utilizzo}
-
 \section{Aggiunta del Navigator}
+
+Successivamente ho creato un protocollo \textbf{CoordinatorNavigable} che estende 
+il coordinator visto in precedenza e ne aggiunge un oggetto navigator:
+
+\begin{minted}{swift}
+protocol CoordinatorNavigable: CoordinatorPresentable {
+    
+    /** Responsabile dello stack di navigazione  */
+    var navigator: Navigator { get }
+}
+
+extension CoordinatorNavigable {
+    
+    /**
+     Aggiunge il rootViewController allo stack di navigazione
+    */
+    func pushCoordinator(_ childCoordinator: BaseCoordinatorPresentable,
+            animated: Bool) {
+        add(childCoordinator: childCoordinator)
+        childCoordinator.start()
+        navigator.push(childCoordinator._rootViewController,
+                animated: animated,
+                onPoppedCompletion: { [weak self] in
+                    self?.remove(childCoordinator: childCoordinator)
+        })
+    }
+}
+
+final class Navigator: NSObject {
+
+    private let navigationController: UINavigationController
+    private var completions: [UIViewController: () -> Void]
+    
+    init(navigationController: UINavigationController = UINavigationController()) {
+        self.navigationController = navigationController
+        self.completions = [:]
+        
+        super.init()
+        
+        self.navigationController.delegate = self
+    }
+}
+\end{minted}
+
+Come si può osservare dall'esempio riportato precedentemente il \textbf{Navigator}
+ha lo scopo di tenere in memoria un UINavigationController che sarà il vero 
+responsabile della navigazione.
+
+\subsection{Utilizzo del pattern in QIX}
+
+In QIX è stato creato un Coordinator principale deniminato AppCoordinator che gestisce
+tutto lo startup dell'applicazione: decide quale vista mostrare e controlla se ci sono dei dynamic links in arrivo.
+Tutta la struttura attuale dell'applicazione è invece costruita sul MainTabBarCoordinator, ossia il responsabile
+della TabBar e di tutti i coordinator suoi figli.\\
+
+\begin{minipage}{\linewidth}
+    \centering
+    \includegraphics[width=10cm]{qix_coord}
+    \captionof{figure}{
+       Il Coordinator pattern in QIX
+    }
+    \label{fig:6}
+\end{minipage}\\ \\
+
+Tale struttura è stata creata per permettere modifiche future semplici e scalabili.
+Esiste solo un vincolo ossia un rootCoordinator, ossia colui che gestirà il primissimo viewController dell'applicazione, in questo caso è MainTabbarCoordinator ed è il
+coordinator che gestirà le animazioni.
