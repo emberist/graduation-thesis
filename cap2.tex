@@ -1,20 +1,21 @@
 
 
-Prima di entrare nel merito delle soluzioni e problemi affrontati, elenco brevemente gli strumenti
+Prima di entrare nel merito delle soluzioni e problemi affrontati, descrivo gli strumenti
 base di iOS che mi sono stati utile nella progettazione e implementazione finale.
 
 \section{Navigazione standard}
 
 Un'applicazione iOS è un insieme di \textbf{UIViewController}\cite{viewcontroller} diversi che 
-regolano ogni aspetto della lora vista;
+regolano ogni aspetto della lora vista.
 
-% Qualsiasi applicazione ha infatti un rootViewController, ossia un ViewController di partenza
+Qualsiasi applicazione ha infatti un rootViewController, ossia un ViewController di partenza
+che sarà il primo elemento attivo sulla \textbf{UIWindow}.
 
 Ogni applicazione può avere degli \textbf{UINavigationController}\cite{navigationcontroller},
 ossia dei contenitori di \textbf{UIViewController} che vengono
 utilizzati per mantenere lo stack di navigazione e gestire la transizioni tra due UIViewController.
 
-Nella figura~\ref{fig:1} si nota facilmente come un NavigationController gestisce un'array di ViewController e una sola 
+Nella figura~\ref{fig:1} si nota come un NavigationController gestisce un'array di ViewController e una sola 
 navigation bar. \\
 % In iOS sono infatti innate molte animazioni di navigazione che è utile sfruttare, piuttosto di creare 
 % componenti custom poi difficili da rendere interattivi.\\
@@ -45,7 +46,7 @@ Esistono tre tipologie base di navigazione:
     \end{minipage}
     }
     \item{ \textbf{Modal}: un ViewController può presentare un altro ViewController senza necessariamente avere un 
-        Navigation Controller, l'animazione standard è dal basso verso l'alto come in figura~\ref{fig:3}. La navigazione modale viene
+        Navigation Controller. L'animazione standard è dal basso verso l'alto come in figura~\ref{fig:3}. La navigazione modale viene
         usata solitamente per la presentazione di task che richiedono una sola operazione oppure per rendere evidente un cambio del contesto precedente.
         \par
         \begin{minipage}{\linewidth}
@@ -63,54 +64,6 @@ Esistono tre tipologie base di navigazione:
     }
 \end{enumerate}
 
-% Avendo definito i principali metodi di navigatione tra ViewController torniamo al problema iniziale:
-% \textit{Come possiamo rendere dinamica la navigazione?}
-
-% A seguito di uno studio approfondito di varie tecniche di navigazione iOS ho scelto di utilizzare il
-% \textbf{Coordinator Pattern}\cite{coordinatorpattern}.
-
-% \section{Il Coordinator Pattern}
-
-% Generalmente in iOS l'intera logica di un ViewController viene scritta nel ViewController stesso, creando spesso
-% file di grosse dimensioni e disordine generale. Il Coordinator Pattern è nato proprio per rendere 
-% le applicazioni più scalabili e leggere. 
-
-% Ogni ViewController infatti delega tutte le decisioni al suo Coordinator che in base a determinate logiche deciderà
-% i passi successivi.
-
-% Ogni Coordinator può controllare un ViewController o più Coordinator, questo rende le viste
-% indipendenti tra di loro e rende ogni ViewControler totalmente invisibile agli altri.\\
-
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=10cm]{coordinator}
-%     \captionof{figure}{
-%         Il Coordinator Pattern
-%     }
-%     \label{fig:4}
-% \end{minipage}\\ \\
-
-% La resposibilità dei coordinator è infatti la navigazione, come un navigation controller gestisce i sui View Controller, un coordinator gestisce
-% i suoi figli e questo rende ogni vista o flow di navigazione totalmente indipendente dal resto dell'applicazione.
-
-% Per navigare tra i view controller vengono generalmente usate le tipologie di navigazione
-% descritte nella sezione~\ref{sec:navigation}, tranne le segue, che essendo definete da vista grafica renderebbero
-% la navigazine statica e fissata su determinati ViewController. \\
-
-% Di seguito in figura~\ref{fig:5} presento uno schema dell'utilizzo di due coordinator
-% per la gestione di una lista di prodotti e il carrello. \\
-
-% \begin{minipage}{\linewidth}
-%     \centering
-%     \includegraphics[width=10cm]{coordinator-example}
-%     \captionof{figure}{
-%        Esempio di coordinator pattern
-%     }
-%     \label{fig:5}
-% \end{minipage}\\ \\
-
-% Come si evince dall'immagine è presente in entrambi i coordinator è presente un oggetto
-% \textbf{navigator} che sarà in gestore di un UINavigationController
 \section{UIKit Dynamics}
 
 Per la progettazione iniziale delle animazioni è stato fatto un attento studio a metodologie e frameworks
@@ -135,20 +88,20 @@ attraverso la seguente funzione:
 \subsection{Comportamenti base}
 
 Definiamo \textbf{DynamicItem} qualsiasi vista a cui viene assegnato un \textbf{UIDynamicBehavior}.
-Ogni animator attraverso il metodo addBehavior puà assegnare a determinate
-viste comportamenti fisici elencati sei seguito: 
+Ogni animator attraverso il metodo addBehavior può assegnare a determinate
+viste comportamenti fisici elencati di seguito: 
 
 \begin{itemize}
     % \item\textbf{UIDynamicBehavior}: il comportamento base da cui ereditano tutti gli altri;
     \item\textbf{UIAttachmentBehavior}: crea una relazione o legame tra due DynamicItem o tra un DynamicItem e un punto di ancoraggio;
-    \item\textbf{UICollisionBehavior}: un oggetto che conferisce a un array di DynamicItems la possibilità di impegnarsi in collisioni tra loro e con i limiti specificati del comportamento
+    \item\textbf{UICollisionBehavior}: un oggetto che conferisce a un array di DynamicItems la possibilità di impegnarsi in collisioni tra loro e con i limiti specificati del comportamento;
     \item\textbf{UIFieldBehavior}: un oggetto che conferisce delle proprietà magnetiche, elettriche a un DynamicItem;
     \item\textbf{UIGravityBehavior}: aggiunge all'oggeto un forza di gravità;
-    \item\textbf{UIPushBehavior}: Aggiunge all'oggetto una forza continua o istantanea in una direzione specifica;
-    \item\textbf{UISnapBehavior}: Un comportamento simile a una molla il cui movimento iniziale viene smorzato nel tempo in modo che l'oggetto si stabilizzi in un punto specifico.
+    \item\textbf{UIPushBehavior}: aggiunge all'oggetto una forza continua o istantanea in una direzione specifica;
+    \item\textbf{UISnapBehavior}: un comportamento simile a una molla il cui movimento iniziale viene smorzato nel tempo in modo che l'oggetto si stabilizzi in un punto specifico.
 \end{itemize}
 
-Di seguito un esempio di implementazione degli strumenti UIDynamics in QIX
+Un esempio di implementazione degli strumenti UIDynamics in QIX e mostrato in figura~\ref{fig:6}
 
 \begin{minipage}{\linewidth}
     \centering
@@ -164,7 +117,7 @@ Di seguito un esempio di implementazione degli strumenti UIDynamics in QIX
 Il contenuto di ogni applicazione iOS è inserito all'interno di un oggetto denominato
 \textbf{UIWindow}\cite{uiwindow}. Questa finestra è disponibile in ogni UIViewController e permette di aggiungere contenuti
 come viste o interi UIViewController al di sopra di tutto il contesto dell'app. Questo rende essenzialmente ogni contenuto presentato
-indipendente per esempio da un stack di navigazione.
+indipendente per esempio da uno stack di navigazione.
 
 \begin{minipage}{\linewidth}
     \centering
@@ -176,14 +129,17 @@ indipendente per esempio da un stack di navigazione.
 
 \section{Delegation pattern}\label{delegation}
 
-Il \textbf{Delegation pattern} è una delle strutture più usate nelle app iOS in particolare in QIX
-è stato molto sfruttato per la comunicazione tra ViewControler e Coordinator.
+Il \textbf{Delegation pattern} è una delle strutture più usate nelle app iOS. In particolare in QIX
+è stato molto sfruttato per la comunicazione tra ViewController e Coordinator.
 
 Tale pattern non è altro che un insieme di interfacce e metodi che
-vengono progettate per publicizzare con il resto dell'applicazione degli eventi che avvengono in uno specifico ViewController
+vengono progettate per pubblicizzare con il resto dell'applicazione degli eventi che avvengono in uno specifico ViewController.
 
-In Swift le interfaccie si utilizzano attraverso la Keyword \textbf{protocol}, questi oggetti possono contenere metodi, variabili, closure
+In \textbf{Swift} le interfaccie si utilizzano attraverso la Keyword \textbf{protocol}. Questi oggetti possono contenere metodi, variabili, closure
 e sono molto utili per la definizione di strutture dinamiche tipizzate.
+
+Swift è un linguaggio di programmazione Object Oriented utilizzato per la creazione di applicazioni per dispositivi Apple. È un
+linguaggio molto innovativo creato da Apple nel 2014, ad oggi siamo alla versione 5.1 e negli anni ha subito molti cambiamenti e evoluzioni.
 
 \subsection{Esempio Delegation}
 
@@ -247,22 +203,22 @@ Nell'esempio è in parte utilizzato anche il Coordinator Pattern che spiegherò 
 \section{UIGestureRecognizer}
 
 In iOS per interagire con le viste attraverso il display touch screen si utilizzano delle UIGestureRecognizer.
-Tali strumenti sono nativi e offrono diverse tipologie per l'iterazione:
+Tali strumenti sono nativi e ne esistono diverse tipologie in base al tipo di interazione con l'utente:
 
 \begin{itemize}
-    \item UITapGestureRecognizer: respansabile della gestione dei tap
+    \item UITapGestureRecognizer: responsabile della gestione dei tap
 
-    \item UIPinchGestureRecognizer: respansabile della gestione del pitch ossia la gesture spesso usata per lo zoom
+    \item UIPinchGestureRecognizer: responsabile della gestione del pinch ossia la gesture spesso usata per lo zoom
     
-    \item UIRotationGestureRecognizer: respansabile della gestione delle rotazioni
+    \item UIRotationGestureRecognizer: responsabile della gestione delle rotazioni
     
-    \item UISwipeGestureRecognizer: responsabile di uno swipe ossia un trascinamento in una direzione molto breve
+    \item UISwipeGestureRecognizer: responsabile di uno swipe ossia un trascinamento molto breve in una direzione 
     
     \item UIPanGestureRecognizer: responsabile del drag and drop
     
-    \item UIScreenEdgePanGestureRecognizer: responsabile di uno swipe ossia un trascinamento nei bordi dello schermo
+    \item UIScreenEdgePanGestureRecognizer: responsabile di un di una Pan gesture localizzata ai limiti destro e sinistro dello schermo
     
-    \item UILongPressGestureRecognizer: responsabile di una prossione prolungata nel tempo
+    \item UILongPressGestureRecognizer: responsabile di una pressione di tocco prolungata nel tempo e maggiore di un valore di soglia
 \end{itemize}
 
 In QIX è stata usata una UIPanGestureRecognizer per la gestione del trascinamento delle CardView animate.

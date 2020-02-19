@@ -2,46 +2,18 @@
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
 \usepackage[italian]{babel}
-\usepackage{fixltx2e,bold-extra,geometry,
+\usepackage[left=1.2in,right=1.2in,top=2in,bottom=1.5in]{geometry}
+
+\usepackage{fixltx2e,bold-extra,
     amssymb,amsmath,mathtools, microtype,url,cite}
 \usepackage[bookmarks=true, hidelinks, pdftitle={
-SELEZIONE DI TOPOLOGIE D'ANTENNA MINIATURIZZATE SU MD},
-pdfauthor={Alex Pacini}]{hyperref}
+PROGETTAZIONE E SVILUPPO DI UN'APPLICAZIONE PER LA FIDELIZZAZIONE
+E IL REWARDING DEGLI UTENTI},
+pdfauthor={Riccardo Caranfil}]{hyperref}
 \usepackage{bold-extra}
-\usepackage{listings}
 \usepackage{xcolor}
 \usepackage{caption}
 \usepackage{minted}
-
-\lstdefinelanguage{swift}
-{
-  morekeywords={
-    func,if,then,else,for,in,while,do,switch,case,default,where,break,continue,fallthrough,return,
-    typealias,struct,class,enum,protocol,var,func,let,get,set,willSet,didSet,inout,init,deinit,extension,
-    subscript,prefix,operator,infix,postfix,precedence,associativity,left,right,none,convenience,dynamic,
-    final,lazy,mutating,nonmutating,optional,override,required,static,unowned,safe,weak,internal,
-    private,public,is,as,self,unsafe,dynamicType,true,false,nil,Type,Protocol,
-    UIViewController,UINavigationController,Bool
-  },
-  morecomment=[l]{//}, % l is for line comment
-  morecomment=[s]{/*}{*/}, % s is for start and end delimiter
-  morestring=[b]" % defines that strings are enclosed in double quotes
-}
-
-\definecolor{keyword}{HTML}{BA2CA3}
-\definecolor{string}{HTML}{D12F1B}
-\definecolor{comment}{HTML}{008400}
-
-\lstset{
-  language=swift,
-  basicstyle=\ttfamily,
-  showstringspaces=false, % lets spaces in strings appear as real spaces
-  columns=fixed,
-  keepspaces=true,
-  keywordstyle=\color{keyword},
-  stringstyle=\color{string},
-  commentstyle=\color{comment},
-}
 
 
 \pagestyle{headings}
@@ -55,10 +27,6 @@ pdfauthor={Alex Pacini}]{hyperref}
     \null
     \vfill
     \thispagestyle{empty}
-%     \begin{center}
-% %         \textit{This page intentionally left blank.}
-%         % \textit{Questa pagina \`e lasciata intenzionalmente bianca.}
-%     \end{center}
     \newpage
 }
 % 
@@ -81,20 +49,7 @@ pdfauthor={Alex Pacini}]{hyperref}
         \fi
     }
 \makeatother
-%
-% Length to set margins for 65 chars
-\newlength{\sixtyfivecharwidth}
-\settowidth{\sixtyfivecharwidth}{
-    \normalfont abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz1234567890123}
-% 
-%Integral with the limit below(mathrlap)
-% \newcommand{\intlimr}[1]{\ensuremath{\int \limits_{\mathrlap{#1}}}}
-% 
-% This redefine could cause big issues! See: 
-% http://tex.stackexchange.com/questions/248421/use-mathclap-as-default-in-limits-of-integration
-% \let\oldlimits\limits
-% \def\limits_#1{\oldlimits_{\mathclap{#1}}}
-\def\mclimits_#1{\limits_{\mathclap{#1}}}
+
 %%%%%%%%%%%%%%%% End New Commands %%%%%%%%%%%%
 
 \begin{document}
@@ -102,17 +57,8 @@ pdfauthor={Alex Pacini}]{hyperref}
     \input{./titlepage}
     \intentblankpage
     
-    \newgeometry{text={\sixtyfivecharwidth,35\baselineskip}}
     \vspace*{50mm}
-    %\begin{flushright}
-    %     {\Large{\bf Keywords:}\\ \vspace{5mm}
-    %         Magneto-Dielettrico\\ \vspace{2mm}
-    %         Correnti Superficiali\\ \vspace{2mm}
-    %         Topologie di Antenne\\ \vspace{2mm}
-    %         Far-Field\\
-    %     }
-    % \end{flushright}
-        
+
     \vspace*{50mm}
     \begin{flushright}
         \textit{\large Ringrazio la mia famiglia e tutti i miei amici per avermi accompagnato lungo questo percorso}
@@ -120,18 +66,6 @@ pdfauthor={Alex Pacini}]{hyperref}
     
     \newpage
     
-    % \vspace*{30mm}
-    % \begin{flushright}
-    %     \textit{\large Citazione 
-    %         \\ \vspace{5mm}  - Tizio Caio -}
-    % \end{flushright}
-    
-    % \vfill
-    
-    % \noindent \hspace{20mm} \textit{\large{Ringraziamenti:}} \vspace{5mm}\\
-    % Da scrivere
-    
-    % \newpage
     \tableofcontents
     
     \chapter*{Introduzione}
@@ -139,7 +73,7 @@ pdfauthor={Alex Pacini}]{hyperref}
     \addcontentsline{toc}{chapter}{Introduzione}  
     \input{./introduzione}
     
-    \chapter{Progettazione iniziale}
+    \chapter{Obiettivo}
     \label{CH:1}
     \input{./cap1}
     

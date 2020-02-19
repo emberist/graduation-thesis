@@ -1,25 +1,25 @@
 
 Un'altra interessante funzione di Firebase sono i \textbf{Dynamic Links}
 ossia dei semplici URL generati dalla console o direttamente dall'applicazione
-che consentono la creazione semplicata di particolari \textbf{DeepLink}.
+che consentono la creazione semplificata di particolari \textbf{DeepLink}.
 
 In particolare i DeepLink in Android e iOS sono degli URl che vengono registrati nell'applicazione
 e non fanno altro che evitare l'apertura del browser rispetto a quella dell'applicazione.
 
 Questo permette agli utenti di aprire direttamente l'applicazione in questione
-attraverso lo smartphone o il Computer attraverso il browser, ma trasportando dei dati utili all'azienda.
+attraverso lo smartphone o il computer attraverso il browser, ma trasportando dei dati utili all'azienda.
 
 
 
-In particolare nel mio caso mi è stato chiesto di implementare un sistema di inviti, per cui 
-un utente può invitarene un altro attraverso questi links ed è necessario tracciare
-l'utente che ha inviato l'invito per iviargli un premio.
+In particolare ho implementato un sistema di inviti, per cui 
+un utente può invitarne un altro attraverso questi link ed è necessario tracciare
+l'utente che ha inviato l'invito per inviargli un premio.
 
 Per risolvere il problema abbiamo prima implementato i Dynamic Links attraverso le API de
-di Firebase e successivamente nella creazione del Link iniettiamo dell'URL un id univoco che identifica l'utente
+di Firebase e successivamente nella creazione del link iniettiamo dell'URL un id univoco che identifica l'utente
 che crea il link di invito.
 
-\subsection{Generazione di un DynamicLink}
+\subsection*{Generazione di un DynamicLink}
 
 Attraverso Firebase risulta molto semplice generare il DynamicLink,
 l'unica cosa che ci serve è l'id dell'utente
@@ -28,7 +28,8 @@ l'unica cosa che ci serve è l'id dell'utente
 let userId = Configuration.shared.fetchUserId() 
 
 // DeepLink registrato nell'app
-let targetLink = URL(string: "https://myqix.com/invitation#\(userId)")
+let targetLink = URL(string:
+    "https://myqix.com/invitation#\(userId)")
 
 // Generato da Firebase
 let dynamicLinksDomain = "https://myqix3appdev.page.link"
@@ -37,11 +38,13 @@ let dynamicLinksDomain = "https://myqix3appdev.page.link"
 let linkBuilder = DynamicLinkComponents(link: targetLink,
     domainURIPrefix: dynamicLinksDomainURIPrefix)
 
-linkBuilder.iOSParameters = DynamicLinkIOSParameters(bundleID: "...")
+linkBuilder.iOSParameters = 
+    DynamicLinkIOSParameters(bundleID: "...")
 linkBuilder.iOSParameters?.appStoreID = "1459917691"
 linkBuilder.iOSParameters?.minimumAppVersion = "0.0.2"
 
-linkBuilder.androidParameters = DynamicLinkAndroidParameters()
+linkBuilder.androidParameters
+    = DynamicLinkAndroidParameters()
 linkBuilder.androidParameters?.fallbackURL = link
 
 // Crea un versione del link più piccola
@@ -58,9 +61,9 @@ linkBuilder.shorten { url, _, error in
 
 \end{minted}
 
-\subsection{Ottenere i dati}
+\subsection*{Ottenere i dati}
 
-Ogni volta che un utente clicca su un dynamicLink iOS controlla
+Ogni volta che un utente clicca su un dynamicLink, iOS controlla
 se il link è registrato da qualche app e se questo è il caso
 inoltra il link all'app che poi dovrà gestirlo aprendola. 
 Il link arriva quindi in una funzione di inizializzazione dell'applicazione all'interno del
@@ -70,7 +73,8 @@ file \textbf{AppDelegate}, da cui possiamo analizzare i dati ricevuti e effettua
 // Metodo chiamato allo startup con il dynamic link
 func application(_ application: UIApplication,
     continue userActivity: NSUserActivity,
-    restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+    restorationHandler: 
+        @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         
     // Controllo se esiste il link
     if let incomingURL = userActivity.webpageURL {

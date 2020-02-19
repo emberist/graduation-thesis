@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-    \PYG{n+nb+bp}{UIDynamicAnimator}\PYG{p}{.}\PYG{k+kd}{init}\PYG{p}{(}\PYG{n}{referenceView} \PYG{n}{view}\PYG{p}{:} \PYG{n+nb+bp}{UIView}\PYG{p}{)}
-\end{Verbatim}

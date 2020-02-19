@@ -1,5 +1,8 @@
 
 
+Da questo capitolo in poi esamino uno a uno i requisiti base dell'applicazione, spiegando per ognuno
+i problemi riscontrati e soluzioni proposte e implementate.
+
 Avendo definito i principali metodi di navigatione tra ViewController al capitolo~\ref{CH:2} torniamo al problema iniziale:
 \textit{Come possiamo rendere dinamica la navigazione?}
 
@@ -15,7 +18,7 @@ le applicazioni più scalabili e leggere.
 Ogni ViewController infatti delega tutte le decisioni al suo Coordinator usando il Delegation Pattern (vedere sezione~\ref{delegation}) che in base alle logiche
 della vista in questione deciderà i passi successivi.
 
-Ogni Coordinator può controllare un ViewController o più Coordinator, questo rende le viste
+Ogni Coordinator può controllare un ViewController o più Coordinator. Questo rende le viste
 indipendenti tra di loro e rende ogni ViewControler totalmente invisibile agli altri.\\
 
 \begin{minipage}{\linewidth}
@@ -27,12 +30,12 @@ indipendenti tra di loro e rende ogni ViewControler totalmente invisibile agli a
     \label{fig:4}
 \end{minipage}\\ \\
 
-La resposibilità dei coordinator è infatti la navigazione, come un navigation controller gestisce i sui View Controller, un coordinator gestisce
+La resposibilità dei coordinator è infatti la navigazione. Come un navigation controller gestisce i sui View Controller, un coordinator gestisce
 i suoi figli e questo rende ogni vista o flow di navigazione totalmente indipendente dal resto dell'applicazione.
 
 Per navigare tra i view controller vengono generalmente usate le tipologie di navigazione
-descritte nella sezione~\ref{sec:navigation}, tranne le segue, che essendo definete da vista grafica renderebbero
-la navigazine statica e fissata su determinati ViewController. \\
+descritte nella sezione~\ref{sec:navigation}, tranne le segue, che essendo definite da vista grafica renderebbero
+la navigazione statica e fissata su determinati ViewController. \\
 
 Di seguito in figura~\ref{fig:5} presento uno schema dell'utilizzo di due coordinator
 per la gestione di una lista di prodotti e il carrello. \\
@@ -58,12 +61,12 @@ Ogni coordinator ha degli elementi fissi che sono:
     \item Un array di coordinator figli;
 \end{itemize}
 
-Per questo ho iniziato implementando dei protocolli:
+Per questo ho iniziato implementando dei protocolli
 \subsection{Protocolli base}
 
-Il primo protollo implememtato è quello che defisce un qualunque coordinator
+Il primo protollo implememtato è quello che definisce un qualunque coordinator
 e ne tiene in memoria i figli in modo che non vengano
-dealloccati automaticamente dal sistema operativo.
+deallocati automaticamente dal sistema operativo.
 
 \begin{minted}{swift}
 protocol Coordinator: class {
@@ -114,12 +117,15 @@ extension BaseCoordinatorPresentable {
         - animated: Specifica se con o senza animazione modale
      */
     
-    func presentCoordinator(_ childCoordinator: BaseCoordinatorPresentable,
-        animated: Bool) {
+    func presentCoordinator(_ childCoordinator:
+        BaseCoordinatorPresentable, animated: Bool) {
 
         add(childCoordinator: childCoordinator)
         childCoordinator.start()
-        _rootViewController.present(childCoordinator._rootViewController, animated: animated)
+        _rootViewController.present(
+            childCoordinator._rootViewController,
+            animated: animated
+        )
     }
     
     /**
@@ -142,10 +148,12 @@ extension BaseCoordinatorPresentable {
      - Parameters:
         - childCoordinator: Il coordinator da chiudere e rilasciare
         - animated: Specifica se con o senza animazione modale
-        - completion: closure che viene eseguita alla vine del dismiss
+        - completion: closure che viene eseguita alla vine 
+          del dismiss
      */
     
-    func dismissCoordinator(_ childCoordinator: BaseCoordinatorPresentable,
+    func dismissCoordinator(_ childCoordinator:
+        BaseCoordinatorPresentable,
         animated: Bool, completion: (() -> Void)? = nil) {
 
         childCoordinator._rootViewController.dismiss(animated: animated,
@@ -159,7 +167,7 @@ extension BaseCoordinatorPresentable {
 \subsection{Coordinator modale}
 
 Il BaseCoordinatorPresentable è stato definito per evitare errori di \textbf{associetedtype},
-infatti questo protocollo non deve mai essere implemetato direttamente, ma soltanto con il protocollo sucessivo
+infatti questo protocollo non deve mai essere implementato direttamente, ma soltanto con il protocollo successivo
 
 \begin{minted}{swift}
 protocol CoordinatorPresentable: BaseCoordinatorPresentable {
@@ -188,7 +196,7 @@ extension CoordinatorPresentable {
 \section{Aggiunta del Navigator}
 
 Successivamente ho creato un protocollo \textbf{CoordinatorNavigable} che estende 
-il coordinator visto in precedenza e ne aggiunge un oggetto navigator:
+il coordinator visto in precedenza e ne aggiunge un oggetto navigator
 
 \begin{minted}{swift}
 protocol CoordinatorNavigable: CoordinatorPresentable {
@@ -202,8 +210,9 @@ extension CoordinatorNavigable {
     /**
      Aggiunge il rootViewController allo stack di navigazione
     */
-    func pushCoordinator(_ childCoordinator: BaseCoordinatorPresentable,
-            animated: Bool) {
+    func pushCoordinator(_ childCoordinator:
+        BaseCoordinatorPresentable, animated: Bool) {
+
         add(childCoordinator: childCoordinator)
         childCoordinator.start()
         navigator.push(childCoordinator._rootViewController,
@@ -219,7 +228,9 @@ final class Navigator: NSObject {
     private let navigationController: UINavigationController
     private var completions: [UIViewController: () -> Void]
     
-    init(navigationController: UINavigationController = UINavigationController()) {
+    init(navigationController:
+        UINavigationController = UINavigationController()) {
+            
         self.navigationController = navigationController
         self.completions = [:]
         
@@ -247,7 +258,7 @@ della TabBar e di tutti i coordinator suoi figli.\\
     \captionof{figure}{
        Il Coordinator pattern in QIX
     }
-    \label{fig:6}
+    \label{fig:8}
 \end{minipage}\\ \\
 
 Tale struttura è stata creata per permettere modifiche future semplici e scalabili.

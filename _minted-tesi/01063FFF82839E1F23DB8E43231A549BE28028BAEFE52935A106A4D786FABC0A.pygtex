@@ -1,3 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-    \PYG{n}{FirebaseApp}\PYG{p}{.}\PYG{n}{configure}\PYG{p}{()}
-\end{Verbatim}
