@@ -1,7 +1,7 @@
 
 
 Da questo capitolo in poi esamino uno a uno i requisiti base dell'applicazione, spiegando per ognuno
-i problemi riscontrati e soluzioni proposte e implementate.
+i problemi riscontrati le soluzioni proposte e implementate per soddisfarli.
 
 Avendo definito i principali metodi di navigatione tra ViewController al capitolo~\ref{CH:2} torniamo al problema iniziale:
 \textit{Come possiamo rendere dinamica la navigazione?}
@@ -9,7 +9,7 @@ Avendo definito i principali metodi di navigatione tra ViewController al capitol
 A seguito di uno studio approfondito di varie tecniche di navigazione iOS ho scelto di utilizzare il
 \textbf{Coordinator Pattern}\cite{coordinatorpattern}.
 
-\section{Il Coordinator Pattern}
+\section{Il Coordinator Pattern}\label{sec:coordinator}
 
 Generalmente in iOS l'intera logica di un ViewController viene scritta nel controller stesso, creando spesso
 file di grosse dimensioni e disordine generale. Il Coordinator Pattern è nato proprio per rendere 
@@ -28,7 +28,7 @@ indipendenti tra di loro e rende ogni ViewControler totalmente invisibile agli a
         Il Coordinator Pattern
     }
     \label{fig:4}
-\end{minipage}\\ \\
+\end{minipage} \\\\ 
 
 La resposibilità dei coordinator è infatti la navigazione. Come un navigation controller gestisce i sui View Controller, un coordinator gestisce
 i suoi figli e questo rende ogni vista o flow di navigazione totalmente indipendente dal resto dell'applicazione.
@@ -47,7 +47,7 @@ per la gestione di una lista di prodotti e il carrello. \\
        Esempio di coordinator pattern
     }
     \label{fig:5}
-\end{minipage}\\ \\
+\end{minipage} \\\\
 
 Come si evince dalla figura~\ref{fig:5} è presente in entrambi i coordinator un oggetto
 \textbf{navigator} che sarà il proxy di un generico UINavigationController
@@ -61,7 +61,7 @@ Ogni coordinator ha degli elementi fissi che sono:
     \item Un array di coordinator figli;
 \end{itemize}
 
-Per questo ho iniziato implementando dei protocolli
+Per questo ho iniziato implementando dei protocolli che sono descritti nelle sezioni seguenti.
 \subsection{Protocolli base}
 
 Il primo protollo implememtato è quello che definisce un qualunque coordinator
@@ -259,8 +259,8 @@ della TabBar e di tutti i coordinator suoi figli.\\
        Il Coordinator pattern in QIX
     }
     \label{fig:8}
-\end{minipage}\\ \\
+\end{minipage} \\ \\
 
 Tale struttura è stata creata per permettere modifiche future semplici e scalabili.
-Esiste solo un vincolo ossia un rootCoordinator, ossia colui che gestirà il primissimo viewController dell'applicazione, in questo caso è MainTabbarCoordinator ed è il
+Esiste solo un vincolo: deve esistere un rootCoordinator, ossia colui che gestirà il primissimo viewController dell'applicazione, in questo caso è MainTabbarCoordinator ed è il
 coordinator che gestirà le animazioni.

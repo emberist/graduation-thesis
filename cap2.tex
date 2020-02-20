@@ -1,7 +1,10 @@
 
 
-Prima di entrare nel merito delle soluzioni e problemi affrontati, descrivo gli strumenti
-base di iOS che mi sono stati utile nella progettazione e implementazione finale.
+Prima di entrare nel merito delle soluzioni e problemi affrontati, descriverò in questo capitolo i concetti e
+gli strumenti base di iOS che mi sono stati utili nella progettazione e implementazione finale dell'applicazione.
+In particolare descriverò per prima cosa i componenti iOS che permettono di definire la navigazione
+all'interno di un'applicazione iOS. In seguito descriverò un framework nativo di iOS atto a creare animazioni
+fisiche, l'utilizzo della UIWindow e le tipologie di gestione del touch screen.
 
 \section{Navigazione standard}
 
@@ -35,7 +38,7 @@ Esistono tre tipologie base di navigazione:
     \item{\textbf{Push}: un UIViewController figlio di un NavigationController può rendere
     visibile un altro ViewController attraverso la funzione 
     "pushViewController" di un Navigation controller. Ogni UIViewController ha
-    infatti un puntatore al UINavigationController genetore, che gestisce la navigazione.
+    infatti un puntatore al UINavigationController genitore, che gestisce la navigazione.
 
     \par
     \begin{minipage}{\linewidth}
@@ -66,7 +69,7 @@ Esistono tre tipologie base di navigazione:
 
 \section{UIKit Dynamics}
 
-Per la progettazione iniziale delle animazioni è stato fatto un attento studio a metodologie e frameworks
+Per la progettazione iniziale delle animazioni è stato fatto un attento studio a delle metodologie e dei frameworks
 atti a creare animazioni interattive fluide.
 
 Alla fine è stato deciso di utilizzare un pacchetto
@@ -75,7 +78,7 @@ con una serie di API, offre delle funzioni di animazione base che
 donano alle viste i comportamenti fisici del mondo reale.
 
 Il framework si basa su degli oggetti \textbf{UIDynamicAnimator} in cui ogni animator è responsabile delle
-animazioni che avengono sulla sua \textbf{referenceView} e si inizializza 
+animazioni che avvengono sulla sua \textbf{referenceView} e si inizializza 
 attraverso la seguente funzione:
 
 \begin{minted}{swift}
@@ -95,8 +98,8 @@ viste comportamenti fisici elencati di seguito:
     % \item\textbf{UIDynamicBehavior}: il comportamento base da cui ereditano tutti gli altri;
     \item\textbf{UIAttachmentBehavior}: crea una relazione o legame tra due DynamicItem o tra un DynamicItem e un punto di ancoraggio;
     \item\textbf{UICollisionBehavior}: un oggetto che conferisce a un array di DynamicItems la possibilità di impegnarsi in collisioni tra loro e con i limiti specificati del comportamento;
-    \item\textbf{UIFieldBehavior}: un oggetto che conferisce delle proprietà magnetiche, elettriche a un DynamicItem;
-    \item\textbf{UIGravityBehavior}: aggiunge all'oggeto un forza di gravità;
+    \item\textbf{UIFieldBehavior}: un oggetto che conferisce delle proprietà magnetiche e elettriche a un DynamicItem;
+    \item\textbf{UIGravityBehavior}: aggiunge all'oggetto un forza di gravità;
     \item\textbf{UIPushBehavior}: aggiunge all'oggetto una forza continua o istantanea in una direzione specifica;
     \item\textbf{UISnapBehavior}: un comportamento simile a una molla il cui movimento iniziale viene smorzato nel tempo in modo che l'oggetto si stabilizzi in un punto specifico.
 \end{itemize}
@@ -110,7 +113,7 @@ Un esempio di implementazione degli strumenti UIDynamics in QIX e mostrato in fi
        Schema dell'implementazione di UIDynamics
     }
     \label{fig:6}
-\end{minipage}\\
+\end{minipage}\\\\
 
 \section{UIWindow}\label{sec:uiwindow}
 
@@ -129,7 +132,7 @@ indipendente per esempio da uno stack di navigazione.
 
 \section{Delegation pattern}\label{delegation}
 
-Il \textbf{Delegation pattern} è una delle strutture più usate nelle app iOS. In particolare in QIX
+Il \textbf{Delegation pattern} è uno dei pattern più usati nelle app iOS. In particolare in QIX
 è stato molto sfruttato per la comunicazione tra ViewController e Coordinator.
 
 Tale pattern non è altro che un insieme di interfacce e metodi che
@@ -216,7 +219,7 @@ Tali strumenti sono nativi e ne esistono diverse tipologie in base al tipo di in
     
     \item UIPanGestureRecognizer: responsabile del drag and drop
     
-    \item UIScreenEdgePanGestureRecognizer: responsabile di un di una Pan gesture localizzata ai limiti destro e sinistro dello schermo
+    \item UIScreenEdgePanGestureRecognizer: responsabile di una Pan gesture localizzata ai limiti destro e sinistro dello schermo
     
     \item UILongPressGestureRecognizer: responsabile di una pressione di tocco prolungata nel tempo e maggiore di un valore di soglia
 \end{itemize}

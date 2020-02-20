@@ -33,7 +33,7 @@ ma invece di presentarlo attraverso i metodi base visti alla sezione~\ref{sec:na
 in modo da non essere vincolati dal contesto dell'utente quando l'animazione finirà, ma allo stesso tempo
 consentire il controllo dell'inizializzazione del UIViewController in base al contesto attuale.
 
-\subsection{Aggiunta del ViewController nella\\UIWindow}
+\subsection{Aggiunta del ViewController nella UIWindow}
 
 L'animazione viene inizializzata nel ViewController, in questo caso \textbf{mainViewController},
 genitore di tutto il contesto, in modo da avere il controllo su tutto 
@@ -60,7 +60,7 @@ mainViewController.addChild(currentAnimationViewController!)
 // Aggiungiamo la vista del nostro viewController alla UIWindow
 keyWindow?.addSubview(currentAnimationViewController!.view)
 
-// Rimuoviamo il viewController
+// Mostriamo il viewController
 currentAnimationViewController!.didMove(toParent: mainViewController)
 \end{minted}
 
@@ -187,7 +187,7 @@ sposti anche l'altra, è una sorta di corda che le lega.
 Per l'ingresso invece è stato inserito un UISnapBehavior, al centro per ogni oggetto, che anima 
 gli oggetti dando un effetto a molla.
 
-Tutte le animazione sono attivate e disattivate in specifici momenti, questo dipende 
+Tutte le animazioni sono attivate e disattivate in specifici momenti, questo dipende 
 dalla UIPanGestureRecognizer e dai movimenti dell'utente.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
@@ -209,7 +209,7 @@ Inizialmente sono stati definiti i possibili componenti che ogni CardView può a
 \end{itemize}
 
 Una volta definiti tutti i componenti per ogni CardView questa viene assemblata "incollando" un componente
-dopo l'altro attraveso una vista chiamata ModularCardView. In figura~\ref{fig:7}, il risultato finale ottenuto. \\
+dopo l'altro attraveso una vista chiamata ModularCardView. In figura~\ref{fig:7}, si può vedere un esempio del risultato finale ottenuto. \\
 
 \begin{minipage}{\linewidth}
     \centering
@@ -284,7 +284,7 @@ for (index, view) in components.enumerated() {
     }
 }
 
-// Attivo tutto i constraints
+// Attivo tutti i constraints
 NSLayoutConstraint.activate(constraints)
 \end{minted}
 
@@ -307,12 +307,12 @@ o interrompere l'animazione.
 \subsection{Il Collider}
 
 Come accennato al punto~\ref{animationenum:3} le CardView hanno dei comportamenti fisici definiti
-da UIkit Dynamics. In particolare, per conferire un effetto di collisione viene usato un \textbf{UICollisionBehavior} e implementato come segue:
+da UIKit Dynamics. In particolare, per conferire un effetto di collisione viene usato un \textbf{UICollisionBehavior} e implementato come segue:
 
 \begin{minted}{swift}
     let itemsCollisionBehavior = UICollisionBehavior(items:
         page.views)
 \end{minted}
 
-In questo modo ogni ogni oggetto con questo
-comportamento riuscirà a scontrasi con gli altri oggetti simili.
+In questo modo ogni oggetto con questo
+comportamento riuscirà a scontrarsi con gli altri oggetti simili.

@@ -1,0 +1,63 @@
+\begin{thebibliography}{10}
+
+\bibitem{urbanasmartsolutions}
+Urbana smart solutions srl.
+\newblock \url{https://www.urbanasolutions.net}.
+
+\bibitem{protoio}
+Proto.io.
+\newblock \url{https://proto.io}.
+
+\bibitem{cardview}
+{\em CardView}.
+\newblock Definiamo CardView una vista rettangolo con un border radius e del
+  contenuto di testo e immagini variabile.
+
+\bibitem{deeplinks}
+Apple Inc.
+\newblock Universal links.
+\newblock \url{https://developer.apple.com/ios/universal-links/}.
+
+\bibitem{viewcontroller}
+Apple Inc.
+\newblock Uiviewcontroller.
+\newblock
+  \url{https://developer.apple.com/documentation/uikit/uiviewcontroller}.
+
+\bibitem{navigationcontroller}
+Apple Inc.
+\newblock Uinavigationcontroller.
+\newblock
+  \url{https://developer.apple.com/documentation/uikit/uinavigationcontroller}.
+
+\bibitem{uikit}
+Apple Inc.
+\newblock Uikit.
+\newblock \url{https://developer.apple.com/documentation/uikit}.
+
+\bibitem{uidynamics}
+Apple Inc.
+\newblock Uikitdynamics.
+\newblock
+  \url{https://developer.apple.com/documentation/uikit/animation_and_haptics/uikit_dynamics}.
+
+\bibitem{uiwindow}
+Apple Inc.
+\newblock Uiwindow.
+\newblock \url{https://developer.apple.com/documentation/uikit/uiwindow}.
+
+\bibitem{coordinatorpattern}
+Soroush Khanlou.
+\newblock Introdotto nel 2015 alla nsspain conference.
+
+\bibitem{lottie}
+Airbnb Inc.
+\newblock Lottie.
+\newblock \url{https://github.com/airbnb/lottie-ios}.
+
+\bibitem{firebase}
+Google LLC.
+\newblock Firebase platform.
+\newblock \url{https://firebase.google.com/}.
+
+\end{thebibliography}

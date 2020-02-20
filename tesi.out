@@ -1,0 +1,37 @@
+\BOOKMARK [0][-]{chapter*.2}{Introduzione}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Progettazione iniziale}{}% 2
+\BOOKMARK [1][-]{subsection.1.0.1}{Mock up iniziale}{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.0.2}{Requisiti}{subsection.1.0.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Componenti base di iOS }{}% 5
+\BOOKMARK [1][-]{section.2.1}{Navigazione standard}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{Tipologie di navigazione}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{UIKit Dynamics}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Comportamenti base}{section.2.2}% 9
+\BOOKMARK [1][-]{section.2.3}{UIWindow}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Delegation pattern}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.4.1}{Esempio Delegation}{section.2.4}% 12
+\BOOKMARK [1][-]{section.2.5}{UIGestureRecognizer}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Navigazione dinamica}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Il Coordinator Pattern}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Implementazione}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.2.1}{Protocolli base}{section.3.2}% 17
+\BOOKMARK [2][-]{subsection.3.2.2}{Coordinator modale}{section.3.2}% 18
+\BOOKMARK [1][-]{section.3.3}{Aggiunta del Navigator}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.3.1}{Utilizzo del pattern in QIX}{section.3.3}% 20
+\BOOKMARK [0][-]{chapter.4}{QIX Shake}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Cos'\350 il QIX Shake?}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.2}{Implementazione sfruttando ereditariet\340}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.3}{Implementazione con estensione}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{Animazioni interattive}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Scomposizione del requisito}{chapter.5}% 26
+\BOOKMARK [2][-]{subsection.5.1.1}{Presentazione delle animazioni}{section.5.1}% 27
+\BOOKMARK [2][-]{subsection.5.1.2}{Aggiunta del ViewController nella UIWindow}{section.5.1}% 28
+\BOOKMARK [2][-]{subsection.5.1.3}{Aggiunta di una gesture}{section.5.1}% 29
+\BOOKMARK [2][-]{subsection.5.1.4}{Aggiunta della gravit\340 }{section.5.1}% 30
+\BOOKMARK [2][-]{subsection.5.1.5}{La CardView modulare}{section.5.1}% 31
+\BOOKMARK [2][-]{subsection.5.1.6}{Paginazione delle animazioni}{section.5.1}% 32
+\BOOKMARK [2][-]{subsection.5.1.7}{Il Collider}{section.5.1}% 33
+\BOOKMARK [0][-]{chapter.6}{Autenticazione}{}% 34
+\BOOKMARK [1][-]{section.6.1}{Firebase Authentication}{chapter.6}% 35
+\BOOKMARK [0][-]{chapter.7}{Dynamic Links}{}% 36
+\BOOKMARK [0][-]{chapter*.6}{Conclusione}{}% 37
