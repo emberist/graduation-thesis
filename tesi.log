@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  20 FEB 2020 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.2.3)  6 MAY 2021 21:17
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/riccardocaranfil/Desktop/UNI/Tesi/latex_corretta_digital/tesi.tex
-(/Users/riccardocaranfil/Desktop/UNI/Tesi/latex_corretta_digital/tesi.tex
+**/Users/riccardocaranfil/Desktop/Riccardo/UNI/Tesi/latex_corretta_digital/tesi.tex
+(/Users/riccardocaranfil/Desktop/Riccardo/UNI/Tesi/latex_corretta_digital/tesi.tex
 LaTeX2e <2018-12-01>
 (/usr/local/texlive/2019/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2018/09/03 v1.4i Standard LaTeX document class
@@ -208,10 +208,7 @@ LaTeX Info: Redefining \lslig on input line 914.
 Package microtype Info: Loading configuration file microtype.cfg.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2019/02/28 v2.7b microtype main configuration file (RS)
-)) (/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip11
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-) (/usr/local/texlive/2019/texmf-dist/tex/latex/cite/cite.sty
+)) (/usr/local/texlive/2019/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
@@ -276,6 +273,10 @@ Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
 \c@Hy@tempcnt=\count119
+ (/usr/local/texlive/2019/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen134
 \Fld@menulength=\count120
@@ -466,20 +467,20 @@ LaTeX Warning: Label `fig:7' multiply defined.
 )
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 55.
-LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
  (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count159
@@ -505,8 +506,8 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2019/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \it@ocap on input line 55.
-LaTeX Info: Redefining \it@ccap on input line 55.
+LaTeX Info: Redefining \it@ocap on input line 56.
+LaTeX Info: Redefining \it@ccap on input line 56.
 
 
 File italian.ldf warning: 
@@ -514,7 +515,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 55.
+italian.ldf    on input line 56.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -550,7 +551,7 @@ italian.ldf    on input line 55.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 55.
+LaTeX Info: Redefining \microtypecontext on input line 56.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -564,7 +565,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 55.
+Package hyperref Info: Link coloring OFF on input line 56.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2019/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -572,9 +573,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count165
 )
-LaTeX Info: Redefining \ref on input line 55.
-LaTeX Info: Redefining \pageref on input line 55.
-LaTeX Info: Redefining \nameref on input line 55.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
  (./tesi.out) (./tesi.out)
 \@outlinefile=\write5
 \openout5 = `tesi.out'.
@@ -616,15 +617,15 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<images/logo.png, id=152, 313.17pt x 313.17pt>
-File: images/logo.png Graphic file (type png)
-<use images/logo.png>
-Package pdftex.def Info: images/logo.png  used on input line 5.
+<images/logo.jpg, id=152, 313.17pt x 313.17pt>
+File: images/logo.jpg Graphic file (type jpg)
+<use images/logo.jpg>
+Package pdftex.def Info: images/logo.jpg  used on input line 5.
 (pdftex.def)             Requested size: 109.61113pt x 109.61113pt.
 LaTeX Font Info:    Font shape `OT1/cmr/bx/sc' in size <20.74> not available
 (Font)              Font shape `OT1/cmr/b/sc' tried instead on input line 15.
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
@@ -632,7 +633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
 
 
-{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.png>]) [2
+{/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/logo.jpg>]) [2
 
 ] [3] [4
 
@@ -656,34 +657,29 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 
 ] [2]
 Capitolo 1.
-(./cap1.tex
+(./chapters/cap1.tex [3
 
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 6.
-
-<images/screen_1.jpg, id=250, 451.6875pt x 977.6525pt>
+]
+<images/screen_1.jpg, id=258, 451.6875pt x 977.6525pt>
 File: images/screen_1.jpg Graphic file (type jpg)
 <use images/screen_1.jpg>
 Package pdftex.def Info: images/screen_1.jpg  used on input line 30.
 (pdftex.def)             Requested size: 91.04872pt x 197.06357pt.
-<images/screen_2.jpg, id=251, 451.6875pt x 977.6525pt>
+<images/screen_2.jpg, id=259, 451.6875pt x 977.6525pt>
 File: images/screen_2.jpg Graphic file (type jpg)
 <use images/screen_2.jpg>
 Package pdftex.def Info: images/screen_2.jpg  used on input line 32.
 (pdftex.def)             Requested size: 91.04872pt x 197.06357pt.
-<images/screen_3.jpg, id=252, 451.6875pt x 977.6525pt>
+<images/screen_3.jpg, id=260, 451.6875pt x 977.6525pt>
 File: images/screen_3.jpg Graphic file (type jpg)
 <use images/screen_3.jpg>
 Package pdftex.def Info: images/screen_3.jpg  used on input line 34.
 (pdftex.def)             Requested size: 91.04872pt x 197.06357pt.
-<images/screen_4.jpg, id=253, 451.6875pt x 977.6525pt>
+<images/screen_4.jpg, id=261, 451.6875pt x 977.6525pt>
 File: images/screen_4.jpg Graphic file (type jpg)
 <use images/screen_4.jpg>
 Package pdftex.def Info: images/screen_4.jpg  used on input line 36.
 (pdftex.def)             Requested size: 91.04872pt x 197.06357pt.
-[3
-
-]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 51.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -694,12 +690,12 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ]
 Capitolo 2.
-(./cap2.tex
+(./chapters/cap2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--25
 
  []
 
-<images/navigation.jpg, id=294, 421.575pt x 324.21124pt>
+<images/navigation.jpg, id=292, 421.575pt x 324.21124pt>
 File: images/navigation.jpg Graphic file (type jpg)
 <use images/navigation.jpg>
 Package pdftex.def Info: images/navigation.jpg  used on input line 28.
@@ -718,10 +714,10 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 26--32
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7]
-<images/push.png, id=303, 1342.01375pt x 723.70375pt>
-File: images/push.png Graphic file (type png)
-<use images/push.png>
-Package pdftex.def Info: images/push.png  used on input line 46.
+<images/push.jpg, id=301, 1342.01375pt x 723.70375pt>
+File: images/push.jpg Graphic file (type jpg)
+<use images/push.jpg>
+Package pdftex.def Info: images/push.jpg  used on input line 46.
 (pdftex.def)             Requested size: 284.52756pt x 153.42888pt.
 
 
@@ -729,10 +725,10 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 47.
 See the caption package documentation for explanation.
 
-<images/modal.png, id=305, 1162.3425pt x 769.87625pt>
-File: images/modal.png Graphic file (type png)
-<use images/modal.png>
-Package pdftex.def Info: images/modal.png  used on input line 57.
+<images/modal.jpg, id=303, 1162.3425pt x 769.87625pt>
+File: images/modal.jpg Graphic file (type jpg)
+<use images/modal.jpg>
+Package pdftex.def Info: images/modal.jpg  used on input line 57.
 (pdftex.def)             Requested size: 284.52756pt x 188.45099pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -742,7 +738,7 @@ See the caption package documentation for explanation.
 
 Underfull \vbox (badness 3396) has occurred while \output is active []
 
- [8 <./images/navigation.jpg> <./images/push.png>]
+ [8 <./images/navigation.jpg> <./images/push.jpg>]
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/default-pyg-prefix.pygstyle) (./_minted-tesi/default.pygstyle) (./_minted-tesi/C83B78DF782CDA1F6A6A22A96228DFA7E28028BAEFE52935A106A4D786FABC0A.pygtex
@@ -752,11 +748,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/b/n' tried instead on input line 2.
-) [9 <./images/modal.png>]
-<images/animation.png, id=329, 322.20375pt x 322.20375pt>
-File: images/animation.png Graphic file (type png)
-<use images/animation.png>
-Package pdftex.def Info: images/animation.png  used on input line 111.
+) [9 <./images/modal.jpg>]
+<images/animation.jpg, id=325, 322.20375pt x 322.20375pt>
+File: images/animation.jpg Graphic file (type jpg)
+<use images/animation.jpg>
+Package pdftex.def Info: images/animation.jpg  used on input line 111.
 (pdftex.def)             Requested size: 284.52756pt x 284.53821pt.
 
 
@@ -779,11 +775,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--117
 
  []
 
-[10 <./images/animation.png>]
-<images/uiwindow.png, id=337, 1169.36874pt x 927.465pt>
-File: images/uiwindow.png Graphic file (type png)
-<use images/uiwindow.png>
-Package pdftex.def Info: images/uiwindow.png  used on input line 127.
+[10 <./images/animation.jpg>]
+<images/uiwindow.jpg, id=332, 1169.36874pt x 927.465pt>
+File: images/uiwindow.jpg Graphic file (type jpg)
+<use images/uiwindow.jpg>
+Package pdftex.def Info: images/uiwindow.jpg  used on input line 127.
 (pdftex.def)             Requested size: 227.62204pt x 180.52237pt.
 
 
@@ -804,22 +800,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--131
 
 Underfull \vbox (badness 7631) has occurred while \output is active []
 
- [11 <./images/uiwindow.png>]
+ [11 <./images/uiwindow.jpg>]
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/4A49FEAB386588CCA18B5BB41131541AE28028BAEFE52935A106A4D786FABC0A.pygtex [12])) [13] [14
 
 ]
 Capitolo 3.
-(./cap3.tex
+(./chapters/cap3.tex
 Underfull \hbox (badness 10000) in paragraph at lines 21--23
 
  []
 
-<images/coordinator.png, id=364, 583.17876pt x 231.86626pt>
-File: images/coordinator.png Graphic file (type png)
-<use images/coordinator.png>
-Package pdftex.def Info: images/coordinator.png  used on input line 26.
+<images/coordinator.jpg, id=358, 583.17876pt x 231.86626pt>
+File: images/coordinator.jpg Graphic file (type jpg)
+<use images/coordinator.jpg>
+Package pdftex.def Info: images/coordinator.jpg  used on input line 26.
 (pdftex.def)             Requested size: 284.52756pt x 113.12721pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -854,10 +850,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-<images/coordinator-example.png, id=372, 1023.825pt x 502.87875pt>
-File: images/coordinator-example.png Graphic file (type png)
-<use images/coordinator-example.png>
-Package pdftex.def Info: images/coordinator-example.png  used on input line 45.
+<images/coordinator-example.jpg, id=366, 1023.825pt x 502.87875pt>
+File: images/coordinator-example.jpg Graphic file (type jpg)
+<use images/coordinator-example.jpg>
+Package pdftex.def Info: images/coordinator-example.jpg  used on input line 45.
 (pdftex.def)             Requested size: 284.52756pt x 139.75385pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -879,7 +875,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--51
 
  []
 
-[16 <./images/coordinator.png> <./images/coordinator-example.png>]
+[16 <./images/coordinator.jpg> <./images/coordinator-example.jpg>]
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/7DE704FFB452359686EE418C99859C65E28028BAEFE52935A106A4D786FABC0A.pygtex)
@@ -899,10 +895,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--254
 
  []
 
-<images/qix_coord.png, id=399, 508.90125pt x 183.68625pt>
-File: images/qix_coord.png Graphic file (type png)
-<use images/qix_coord.png>
-Package pdftex.def Info: images/qix_coord.png  used on input line 257.
+<images/qix_coord.jpg, id=391, 508.90125pt x 183.68625pt>
+File: images/qix_coord.jpg Graphic file (type jpg)
+<use images/qix_coord.jpg>
+Package pdftex.def Info: images/qix_coord.jpg  used on input line 257.
 (pdftex.def)             Requested size: 284.52756pt x 102.70381pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -924,11 +920,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 255--263
 
  []
 
-) [21 <./images/qix_coord.png>] [22
+) [21 <./images/qix_coord.jpg>] [22
 
 ]
 Capitolo 4.
-(./cap4.tex
+(./chapters/cap4.tex
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/E42197C38BE77E876BCAFE68FC326A6FE28028BAEFE52935A106A4D786FABC0A.pygtex)
@@ -948,7 +944,7 @@ Underfull \vbox (badness 4940) has occurred while \output is active []
 
 ]
 Capitolo 5.
-(./cap5.tex [27]
+(./chapters/cap5.tex [27]
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/837B202C49AEF4E99729F63D9B83F875E28028BAEFE52935A106A4D786FABC0A.pygtex)
@@ -957,7 +953,7 @@ Capitolo 5.
  (./_minted-tesi/4255AC38AA1279B015233823424B48E3E28028BAEFE52935A106A4D786FABC0A.pygtex [28])
 \openout3 = `tesi.pyg'.
 
- (./_minted-tesi/4C3DE0B860EFC5021BD1B807DB588C06E28028BAEFE52935A106A4D786FABC0A.pygtex [29])
+ (./_minted-tesi/70AD3C8D00B23725C29B22693716FAAEE28028BAEFE52935A106A4D786FABC0A.pygtex [29])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
@@ -973,10 +969,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
-<images/an12.png, id=460, 1129.21875pt x 1222.5675pt>
-File: images/an12.png Graphic file (type png)
-<use images/an12.png>
-Package pdftex.def Info: images/an12.png  used on input line 216.
+<images/an12.jpg, id=451, 1129.21875pt x 1222.5675pt>
+File: images/an12.jpg Graphic file (type jpg)
+<use images/an12.jpg>
+Package pdftex.def Info: images/an12.jpg  used on input line 216.
 (pdftex.def)             Requested size: 284.52756pt x 308.04759pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
@@ -995,11 +991,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--222
 
 \openout3 = `tesi.pyg'.
 
-(./_minted-tesi/16E223830450E546CCC4C384F2FA2B93E28028BAEFE52935A106A4D786FABC0A.pygtex [32 <./images/an12.png>]
+(./_minted-tesi/1BB91ACDE4C223C6271E21B96FCF1825E28028BAEFE52935A106A4D786FABC0A.pygtex [32 <./images/an12.jpg>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33])
-Underfull \hbox (badness 10000) in paragraph at lines 296--299
+Underfull \hbox (badness 10000) in paragraph at lines 295--298
 
  []
 
@@ -1007,7 +1003,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--299
 
 (./_minted-tesi/B6ABACBEA0260A3DF33F746DA4698EACE28028BAEFE52935A106A4D786FABC0A.pygtex)) [34]
 Capitolo 6.
-(./cap6.tex
+(./chapters/cap6.tex
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/01063FFF82839E1F23DB8E43231A549BE28028BAEFE52935A106A4D786FABC0A.pygtex)
@@ -1020,7 +1016,7 @@ Capitolo 6.
 
  (./_minted-tesi/610B09BCA25313B9AE46C1758F953E4EE28028BAEFE52935A106A4D786FABC0A.pygtex)) [36]
 Capitolo 7.
-(./cap7.tex
+(./chapters/cap7.tex
 \openout3 = `tesi.pyg'.
 
  (./_minted-tesi/3015EFC6651E297E7E25A1EB8C6913F6E28028BAEFE52935A106A4D786FABC0A.pygtex [37
@@ -1053,14 +1049,14 @@ Underfull \hbox (badness 3229) in paragraph at lines 28--32
 \tf@lof=\write7
 \openout7 = `tesi.lof'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 113.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 114.
  [45]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 113.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 114.
  (./tesi.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 113.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 113.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 114.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 114.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 5D98703D3BB467E6064059FE9408B963;2494.
+(rerunfilecheck)             Checksum: 4CC7628310EE57C0E0CEEAFAD1EF391B;2477.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1069,18 +1065,18 @@ runsystem(rm tesi.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 14478 strings out of 492616
- 240896 string characters out of 6129482
+ 14479 strings out of 492616
+ 241038 string characters out of 6129482
  433816 words of memory out of 5000000
  17828 multiletter control sequences out of 15000+600000
  18318 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,39p,899b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,39p,908b,596s stack positions out of 5000i,500n,10000p,200000b,80000s
  </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmttb10.720pk> </Users/riccardocaranfil/Library/texlive/2019/texmf-var/fonts/pk/ljfour/public/cm-mf-extra-bold/cmbcsc10.1244pk></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on tesi.pdf (51 pages, 4095130 bytes).
+Output written on tesi.pdf (51 pages, 1375748 bytes).
 PDF statistics:
- 693 PDF objects out of 1000 (max. 8388607)
- 540 compressed objects within 6 object streams
+ 683 PDF objects out of 1000 (max. 8388607)
+ 539 compressed objects within 6 object streams
  144 named destinations out of 1000 (max. 500000)
  23919 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -3,13 +3,13 @@
 \usepackage[pdftex]{graphicx}
 \usepackage[italian]{babel}
 \usepackage[left=1.2in,right=1.2in,top=2in,bottom=1.5in]{geometry}
-
 \usepackage{fixltx2e,bold-extra,
-    amssymb,amsmath,mathtools, microtype,url,cite}
+    amssymb,amsmath,mathtools, microtype,cite}
 \usepackage[bookmarks=true, hidelinks, pdftitle={
 PROGETTAZIONE E SVILUPPO DI UN'APPLICAZIONE PER LA FIDELIZZAZIONE
 E IL REWARDING DEGLI UTENTI},
 pdfauthor={Riccardo Caranfil}]{hyperref}
+
 \usepackage{bold-extra}
 \usepackage{xcolor}
 \usepackage{caption}
@@ -52,6 +52,7 @@ pdfauthor={Riccardo Caranfil}]{hyperref}
 
 %%%%%%%%%%%%%%%% End New Commands %%%%%%%%%%%%
 
+
 \begin{document}
     \pagenumbering{Roman}
     \input{./titlepage}
@@ -75,31 +76,31 @@ pdfauthor={Riccardo Caranfil}]{hyperref}
     
     \chapter{Progettazione iniziale}
     \label{CH:1}
-    \input{./cap1}
+    \input{./chapters/cap1}
     
     \chapter{Componenti base di iOS }
     \label{CH:2}
-    \input{./cap2}
+    \input{./chapters/cap2}
 
     \chapter{Navigazione dinamica}
     \label{CH:3}
-    \input{./cap3}
+    \input{./chapters/cap3}
 
     \chapter{QIX Shake}
     \label{CH:4}
-    \input{./cap4}
+    \input{./chapters/cap4}
     
     \chapter{Animazioni interattive}
     \label{CH:5}
-    \input{./cap5}
+    \input{./chapters/cap5}
 
     \chapter{Autenticazione}
     \label{CH:6}
-    \input{./cap6}
+    \input{./chapters/cap6}
     
     \chapter{Dynamic Links}
     \label{CH:7}
-    \input{./cap7}
+    \input{./chapters/cap7}
     
     \chapter*{Conclusione}
     \addcontentsline{toc}{chapter}{Conclusione}  

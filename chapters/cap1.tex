@@ -3,7 +3,7 @@ Il mio compito nello sviluppo dell'applicazione è stato quello
 di creare un \textbf{prototipo} iniziale avendo a disposizione un mock up creato con
 proto.io\cite{protoio} e una serie di requisiti essenziali.
 
-\subsection{Mock up iniziale}
+\section{Mock up iniziale}
 
 Il prototipo iniziale dell'applicazione prevede una
 bottom TabBar con cinque elementi ognuno dei quali
@@ -23,7 +23,7 @@ descrivere le seguenti funzionalità:
 
 Oltre alle viste principali ho creato anche un onboarding in cui l'utente può decidere se effetture la registrazione
 attraverso il proprio numero di telefono o entrare direttamente nell'app come utente Guest, un esempio della registrazione è
-visibile nell figura~\ref{fig:screenshots} (d).
+visibile nella figura~\ref{fig:screenshots} (d).
 
 \begin{figure}
     \hfill
@@ -42,7 +42,7 @@ In particolare, come spiegherò nella sezione~\ref{sec:coordinator}, è stato ut
 per la gestione delle viste ed ogni view visibile in figura~\ref{fig:screenshots} è un esempio di UIViewController
 figlio di un CoordinatorNavigable.
 
-\subsection{Requisiti}
+\section{Requisiti}
 La base di partenza di QIX sono state delle funzionalità essenziali e 
 sostanzialmente molto difficili da inserire in una versione dell'app già avanzata.
 È stato quindi deciso di creare un prototipo di partenza avente i seguenti requisiti:
@@ -66,7 +66,7 @@ sostanzialmente molto difficili da inserire in una versione dell'app già avanza
         Le animazioni in questione devono essere progettate in pagine, ciascuna delle quali può contenere 
         più CardView. L'utente vedrà in un determinato momento una e soltanto una pagina.
 
-        Ogni CardView deve essere trascinabile dall'utente e deve interagire con le altre CardView della pagine. 
+        Ogni CardView deve essere trascinabile dall'utente e deve interagire con le altre CardView della pagina. 
         Quando l'utente usa una forza di trascinamento superiore a un valore di soglia tutte le viste devono
         cadere per gravità.
         
@@ -76,7 +76,7 @@ sostanzialmente molto difficili da inserire in una versione dell'app già avanza
         \textbf{Autenticazione}: L'applicazione deve supportare tre diversi stati o modalità di autenticazione:
         \begin{enumerate}
             \item\textbf{Trial Mode}: l'utente è anonimo, esiste solo un id per tenere traccia dei suoi QIX coins.
-            \item\textbf{Signed Mode}: l'utente ha inserito il numero di telefono e il suo genitore.
+            \item\textbf{Signed Mode}: l'utente ha inserito il numero di telefono e il suo genere.
             \item \textbf{Pro Mode}: l'utente aggiunge dei dati su se stesso o collega il suo account a dei social media come Facebook, Google o Instagram.
         \end{enumerate}
         Si nota facilmente che non esiste una stato in cui l'utente non è registrato: questo perchè

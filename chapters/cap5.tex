@@ -31,7 +31,7 @@ o metodologia utilizzata:
 Per creare animazioni definite dal contesto usiamo quindi un semplice UIViewController che gestirà tutte le animazioni,
 ma invece di presentarlo attraverso i metodi base visti alla sezione~\ref{sec:navigation}, lo presentiamo al di sopra della \textbf{UIWindow} (vedere sezione~\ref{sec:uiwindow}),
 in modo da non essere vincolati dal contesto dell'utente quando l'animazione finirà, ma allo stesso tempo
-consentire il controllo dell'inizializzazione del UIViewController in base al contesto attuale.
+consentire il controllo dell'inizializzazione del ViewController delle animazioni in base al contesto attuale.
 
 \subsection{Aggiunta del ViewController nella UIWindow}
 
@@ -127,7 +127,7 @@ private let activeGesture = nil
         vertical: touchInAlert.y - animatedView.bounds.midY
     )
 
-    // Aggingo i comportamenti iniziali
+    // Aggiungo i comportamenti iniziali
     self.createPageDynamicBehaviours()
     self.addCheckForDismiss()
     
@@ -256,8 +256,7 @@ for (index, view) in components.enumerated() {
         } else {
             // Ai sucessivi setto top anchor il bottom
             // anchor dell'elemento precedente
-            let bottomAnchor = 
-                components[index - 1].bottomAnchor
+            let bottomAnchor = components[index - 1].bottomAnchor
             constraints.append(
                 view.topAnchor.constraint(equalTo:
                     bottomAnchor)
@@ -295,7 +294,7 @@ NSLayoutConstraint.activate(constraints)
 
 Avendo definito al punto uno l'utilizzo di un solo UIViewController per le animazioni da un lato viene semplificata
 la presentazione delle stesse, dato che basterà presentare un solo UIViewController, ma dall'altro verrà delegata
-l'intera paginazione al view controller. \\
+l'intera paginazione al view controller stesso. \\
 
 In particolare questo UIViewController accetta come variabile di inizializzazione
 un array di pagine e in base allo stato della UIPanGestureRecognizer deciderà se passare alla pagina successiva

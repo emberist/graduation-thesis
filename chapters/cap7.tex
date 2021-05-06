@@ -10,10 +10,9 @@ Questo permette agli utenti di aprire direttamente l'applicazione in questione
 attraverso lo smartphone o il computer attraverso il browser, ma trasportando dei dati utili all'azienda.
 
 
-
 In particolare ho implementato un sistema di inviti, per cui 
-un utente può invitarne un altro attraverso questi link ed è necessario tracciare
-l'utente che ha inviato l'invito per inviargli un premio.
+un utente può invitarne un altro ed in cui è necessario tracciare
+l'utente che ha inviato l'invito per inviargli dei premi.
 
 Per risolvere il problema abbiamo prima implementato i Dynamic Links attraverso le API
 di Firebase e successivamente nella creazione del link iniettiamo nell'URL un id univoco che identifica l'utente
@@ -21,7 +20,7 @@ che crea il link di invito.
 
 \subsection*{Generazione di un DynamicLink}
 
-Attraverso Firebase risulta molto semplice generare il DynamicLink,
+Attraverso Firebase risulta molto semplice generare un DynamicLink,
 l'unica cosa che ci serve è l'id dell'utente
 
 \begin{minted}{swift}
@@ -67,7 +66,7 @@ linkBuilder.shorten { url, _, error in
 
 Ogni volta che un utente clicca su un dynamicLink, iOS controlla
 se il link è registrato da qualche app e se questo è il caso
-inoltra il link all'app che poi dovrà gestirlo aprendola. 
+inoltra il link all'app che poi dovrà gestirlo aprendosi. 
 Il link arriva quindi in una funzione di inizializzazione dell'applicazione all'interno del
 file \textbf{AppDelegate}, da cui possiamo analizzare i dati ricevuti e effettuare tutte le operazionni necessarie
 
